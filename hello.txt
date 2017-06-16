@@ -2,3 +2,4 @@ hello
 world
 git
 外面天气很好
+我们可以出去玩
