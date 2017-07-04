@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<title>沱沱工社 - 购物车</title>
+<link rel="icon" href="titleicon.ico" mce_href="titleicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/shopping.css"/>
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script type="text/javascript" src="js/Calculation.js"></script>
+<script src="js/jquery1.7.2/jquery-1.7.2.min.js"  type="text/javascript"></script>
+
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+	//jquery特效制作复选框全选反选取消(无插件)
+	// 全选        
+	$(".allselect").click(function () {
+		
+		if($(this).attr("checked")){
+			$(".gwc_tb2 input[name=newslist]").each(function () {
+				$(this).attr("checked", true);
+				// $(this).next().css({ "background-color": "#3366cc", "color": "#ffffff" });
+			});
+			GetCount();
+		
+		}
+		else
+   		{
+			$(".gwc_tb2 input[name=newslist]").each(function () {
+				if ($(this).attr("checked")) {
+					$(this).attr("checked", false);
+					//$(this).next().css({ "background-color": "#ffffff", "color": "#000000" });
+				} else {
+					$(this).attr("checked", true);
+					//$(this).next().css({ "background-color": "#3366cc", "color": "#000000" });
+				} 
+			});
+			GetCount();
+    
+   		}
+		
+	});
+
+	//反选
+	$("#invert").click(function () {
+		$(".gwc_tb2 input[name=newslist]").each(function () {
+			if ($(this).attr("checked")) {
+				$(this).attr("checked", false);
+				//$(this).next().css({ "background-color": "#ffffff", "color": "#000000" });
+			} else {
+				$(this).attr("checked", true);
+				//$(this).next().css({ "background-color": "#3366cc", "color": "#000000" });
+			} 
+		});
+		GetCount();
+	});
+
+	//取消
+	$("#cancel").click(function () {
+		$(".gwc_tb2 input[name=newslist]").each(function () {
+			$(this).attr("checked", false);
+			// $(this).next().css({ "background-color": "#ffffff", "color": "#000000" });
+		});
+		GetCount();
+	});
+
+	// 所有复选(:checkbox)框点击事件
+	$(".gwc_tb2 input[name=newslist]").click(function () {
+		if ($(this).attr("checked")) {
+			//$(this).next().css({ "background-color": "#3366cc", "color": "#ffffff" });
+		} else {
+			// $(this).next().css({ "background-color": "#ffffff", "color": "#000000" });
+		}
+	});
+
+	// 输出
+	$(".gwc_tb2 input[name=newslist]").click(function () {
+		// $("#total2").html() = GetCount($(this));
+		GetCount();
+		//alert(conts);
+	});
+});
+//******************
+function GetCount() {
+	var conts = 0;
+	var aa = 0;
+	$(".gwc_tb2 input[name=newslist]").each(function () {
+		if ($(this).attr("checked")) {
+			for (var i = 0; i < $(this).length; i++) {
+				conts += parseInt($(this).val());
+				aa += 1;
+			}
+		}
+	});
+	$("#shuliang").text(aa);
+	$("#zong1").html((conts).toFixed(2));
+	$("#jz1").css("display", "none");
+	$("#jz2").css("display", "block");
+}
+</script>
+
+
+</head>
+
+<body>
+<div id="top_login">
+      <div class="w">
+    <div class="user fl">
+          <p class=""><span class="iconfont blue">&#xe600;</span>当前位置：</p>
+          <a href="#" class="add">北京<span class="iconfont">&#xe64b;</span>
+      <div class="address"> <span class="xian"></span>
+            <table  >
+          <tr>
+                <td colspan="4">你当前所在的位置：<span class="ftb">北京</span></td>
+              </tr>
+          <tr>
+                <td>热门城市:</td>
+                <td>北京</td>
+                <td>上海</td>
+                <td>广州</td>
+                <td>武汉</td>
+                <td>沈阳</td>
+              </tr>
+          <tr>
+                <td>&nbsp;</td>
+                <td>郑州</td>
+                <td>南京</td>
+                <td>成都</td>
+                <td>福州</td>
+                <td>天津</td>
+              </tr>
+          <tr>
+                <td>&nbsp;</td>
+                <td>深圳</td>
+                <td>杭州</td>
+                <td>苏州</td>
+                <td>无锡</td>
+                <td>青岛</td>
+              </tr>
+        </table>
+            <h5>请选择省:<span class="iconfont"></span></h5>
+            <table width="280" class="choose" >
+          <tr>
+                <td>A-G</td>
+                <td>北京</td>
+                <td>安徽</td>
+                <td>重庆</td>
+                <td>福建</td>
+                <td>广西</td>
+              </tr>
+          <tr>
+                <td>&nbsp;</td>
+                <td>贵州</td>
+                <td>广东</td>
+                <td>甘肃</td>
+                <td></td>
+                <td></td>
+              </tr>
+          <tr>
+                <td>H-K</td>
+                <td>湖南</td>
+                <td>海南</td>
+                <td>河北</td>
+                <td>黑龙江</td>
+                <td>湖北</td>
+              </tr>
+          <tr>
+                <td>&nbsp;</td>
+                <td>河南</td>
+                <td>江苏</td>
+                <td>吉林</td>
+                <td>江西</td>
+                <td></td>
+              </tr>
+          <tr>
+                <td>L-S</td>
+                <td>辽宁</td>
+                <td>内蒙古</td>
+                <td>宁夏</td>
+                <td>青海</td>
+                <td>上海</td>
+              </tr>
+          <tr>
+                <td>&nbsp;</td>
+                <td>山东</td>
+                <td>山西</td>
+                <td>陕西</td>
+                <td>四川</td>
+                <td></td>
+              </tr>
+          <tr>
+                <td>T-Z</td>
+                <td>天津</td>
+                <td>新疆</td>
+                <td>西藏</td>
+                <td>云南</td>
+                <td>浙江</td>
+              </tr>
+        </table>
+          </div>
+      </a>
+          <p>嗨，欢迎来到我们沱沱工社网站!<a href="login.html"> 登录</a> <a href="login.html">注册</a></p>
+        </div>
+    <div class="accoun fr">
+          <ul>
+        <li class="bor"><a href="#">我的账户</a><span class="iconfont">&#xe64b;</span>
+              <ul class="second-menu">
+            <li><a href="#">待付款订单</a></li>
+            <li><a href="#">待签收订单</a></li>
+            <li><a href="#">支付卡账户</a></li>
+            <li><a href="#">优惠券/团购卡</a></li>
+            <li><a href="#">电子礼品卡 </a></li>
+          </ul>
+              <ul class="second-menu1">
+            <li><a href="#">我的消息</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">我的积分</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">兑 换 券</a></li>
+          </ul>
+            </li>
+        <li><span class="iconfont">&#xe654;</span><a href="shopping.html">购物车<b>0</b>件</a></li>
+        <li class="line">|</li>
+        <li class="bor"><a href="#">客服服务<span class="iconfont">&#xe64b;</span></a>
+              <ul class="second-menu custom">
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">新手上路</a></li>
+          </ul>
+            </li>
+        <li class="line">|</li>
+        <li><a href="#">大客户</a></li>
+        <li class="line">|</li>
+        <li><a href="#" class="ftb">ICBC</a><span><img src="img/icbc.png" /></span></li>
+        <li class="line">|</li>
+        <li><a href="#" class="ftb blue">中信</a><img src="img/zhxin.png" /></li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<div id="log" class="w">
+	<div class="logo fl"> <img src="img/icon.jpg"alt="沱沱工社" title="沱沱工社"> </div>
+	<div class="logo1 fl"><img class="pic" src="img/mother.jpg"></div>
+      
+        <dl class="fl">
+              <dd class="fl">
+            <input type="text" class="input_txt ft16"  value="请输入关键字" id="myinput" />
+           <span> <img src="img/搜索.png" /></span> 
+          </dd>
+              <dt class="fl"> </dt>
+              <span><a href="#">阿苏克水果</a><a href="#">李玉双大米</a><a href="#">三文鱼</a></span>
+            </dl>
+      
+      <div class="weixin fr"><img src="img/weix-logo.png" /></div>
+    </div>
+<script type="text/javascript"> 
+            function addListener(element,e,fn){ 
+             if(element.addEventListener){ 
+            element.addEventListener(e,fn,false); 
+             } else { 
+             element.attachEvent("on" + e,fn); 
+              } 
+            } 
+            var myinput = document.getElementById("myinput"); 
+            addListener(myinput,"click",function(){ 
+                myinput.value = ""; 
+            }) 
+            addListener(myinput,"blur",function(){ 
+                myinput.value = "请输入关键词"; 
+            }) 
+
+       </script>
+
+  <div class="shopp_nav w">
+  	
+  </div>
+<div class="gwc" style=" margin:auto;">
+	<table cellpadding="0" cellspacing="0" class="gwc_tb1">
+		<tr>
+			<td class="tb1_td1"><input id="Checkbox1" type="checkbox"  class="allselect"/></td>
+			<td class="tb1_td1">全选</td>
+			<td class="tb1_td3">商品</td>
+			<td class="tb1_td4">商品信息</td>
+			<td class="tb1_td5 fr">数量</td>
+			<td class="tb1_td6">单价</td>
+			<td class="tb1_td7">操作</td>
+		</tr>
+	</table>
+    
+    
+		   
+	<!---商品加减算总数---->
+	<script type="text/javascript">
+	$(function () {
+		var t = $("#text_box1");
+		$("#add1").click(function () {
+			t.val(parseInt(t.val()) + 1)
+			setTotal(); GetCount();
+		})
+		$("#min1").click(function () {
+			if(t.val()>0){
+				t.val(parseInt(t.val()) - 1)
+				setTotal(); GetCount();
+			}
+		})
+		function setTotal() {
+
+			$("#total1").html((parseInt(t.val()) * 35).toFixed(2));
+			$("#newslist-1").val(parseInt(t.val()) * 35);
+		}
+		setTotal();
+	})
+	</script>
+	
+	<table cellpadding="0" cellspacing="0" class="gwc_tb2">
+		<tr>
+			<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-1" /></td>
+			<td class="tb2_td2"><a href="#"><img src="img/.second_menu01.jpg"/></a></td>
+			<td class="tb2_td3"><a href="#">进口柠檬&nbsp;6粒装</a></td>
+			<td class="tb1_td4"><p>肉质细嫩，水分丰富</p></td>
+			<td class="tb1_td5">
+				<input id="min1" name=""  style=" width:20px; height:18px;border:1px solid #ccc; line-height:10px;" type="button" value="-"  class="fl"/>
+				<input id="text_box1" name="" type="text" value="1" style=" width:30px;  height:16px; text-align:center; border:1px solid #ccc;" class="fl" />
+				<input id="add1" name="" style=" width:20px; height:18px;border:1px solid #ccc; line-height:10px; " type="button" value="+" class="fl" />
+			</td>
+			<td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
+			<td class="tb1_td7"><a href="#" class="btn_del">删除</a></td>
+		</tr>
+	</table>
+	
+    
+    
+    
+	<!---商品加减算总数---->
+	<script type="text/javascript">
+	$(function () {
+		var t = $("#text_box2");
+		$("#add2").click(function () {
+			t.val(parseInt(t.val()) + 1)
+			setTotal(); GetCount();
+		})
+		$("#min2").click(function () {
+			if(t.val()>0){
+				t.val(parseInt(t.val()) - 1)
+				setTotal(); GetCount();
+			}
+		})
+		function setTotal() {
+
+			$("#total3").html((parseInt(t.val()) * 23).toFixed(2));
+			$("#newslist-3").val(parseInt(t.val()) * 23);
+		}
+		setTotal();
+	})
+	
+
+	</script>
+    
+	<table cellpadding="0" cellspacing="0" class="gwc_tb2">
+		<tr>
+			<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-3" /></td>
+			<td class="tb2_td2"><a href="#"><img src="img/.second_menu03.jpg" /></a></td>
+			<td class="tb2_td3"><a href="#">佳沛新西兰绿奇异果 原箱装3.5kg/30-33粒</a></td>
+			<td class="tb1_td4"><p>新西兰奇异果出口品牌</p></td>
+			<td class="tb1_td5">
+				<input id="min2" name=""  style=" width:20px; height:18px;border:1px solid #ccc; line-height:10px;" type="button" value="-"  class="fl"/>
+				<input id="text_box2" name="" type="text" value="1" style=" width:30px;  height:16px; text-align:center; border:1px solid #ccc;"  class="fl"/>
+				<input id="add2" name="" style=" width:20px; height:18px;border:1px solid #ccc; line-height:10px;" type="button" value="+"  class="fl"/>
+			</td>
+			<td class="tb1_td6"><label id="total3" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;">35</label></td>
+			<td class="tb1_td7"><a href="#" class="btn_del">删除</a></td>
+		</tr>
+	</table>
+    
+    <!---商品加减算总数---->
+	<script type="text/javascript">
+	$(function () {
+		var t = $("#text_box3");
+		$("#add3").click(function () {
+			t.val(parseInt(t.val()) + 1)
+			setTotal(); GetCount();
+		})
+		$("#min3").click(function () {
+			if(t.val()>0){
+				t.val(parseInt(t.val()) - 1)
+				setTotal(); GetCount();
+			}
+		})
+		function setTotal() {
+
+			$("#total2").html((parseInt(t.val()) * 34).toFixed(2));
+			$("#newslist-2").val(parseInt(t.val()) * 34);
+		}
+		setTotal();
+	})
+	
+	</script>
+    
+	<table cellpadding="0" cellspacing="0" class="gwc_tb2">
+		<tr>
+			<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-2" /></td>
+			<td class="tb2_td2"><a href="#"><img src="img/.second_menu02.jpg" /></a></td>
+			<td class="tb2_td3"><a href="#">精选&nbsp;速冻西兰花&nbsp;500g </a></td>
+			<td class="tb1_td4"><p>速冻蔬菜</p></td>
+			<td class="tb1_td5">
+				<input id="min3" name=""  style=" width:20px; height:18px;border:1px solid #ccc; line-height:10px;" type="button" value="-" class="fl" />
+				<input id="text_box3" name="" type="text" value="1" style=" width:30px; height:16px; text-align:center; border:1px solid #ccc;" class="fl" />
+				<input id="add3" name="" style=" width:20px; height:18px;border:1px solid #ccc; line-height:10px;" type="button" value="+"  class="fl"/>
+			</td>
+			<td class="tb1_td6"><label id="total2" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;">234</label></td>
+			<td class="tb1_td7"><a href="#" class="btn_del">删除</a></td>
+		</tr>
+	</table>
+    
+    
+	
+	<!---总数---->
+	<script type="text/javascript">
+	$(function () {
+		$(".quanxun").click(function () {
+			setTotal();
+			//alert($(lens[0]).text());
+		});
+		function setTotal() {
+			var len = $(".tot");
+			var num = 0;
+			for (var i = 0; i < len.length; i++) {
+				num = parseInt(num) + parseInt($(len[i]).text());
+
+			}
+			//alert(len.length);
+			$("#zong1").text(parseInt(num).toFixed(2));
+			$("#shuliang").text(len.length);
+		}
+		$('.gwc_tb2 .btn_del').click( function(){
+			
+			var b=window.confirm('你确定要删除此商品');
+			if(b==true){
+				$(this).parents('tr').css('display','none');
+				}
+				else{
+					}
+			
+			});
+		//setTotal();
+	})
+	</script>
+	<table cellpadding="0" cellspacing="0" class="gwc_tb3">
+		<tr>
+			<td class="tb1_td1">&nbsp;</td>
+			<td class="tb1_td1">&nbsp;</td>
+			<td class="tb3_td1">&nbsp;</td>
+			<td class="tb3_td2">已选商品 <label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label> 件</td>
+			<td class="tb3_td3">合计(不含运费):<span>￥</span><span style=" color:#ff5500;"><label id="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></span></td>
+			<td class="tb3_td4"><span id="jz1">结算</span><a href="shopping_check.html" style=" display:none;"  class="jz2" id="jz2">结算</a></td>
+		</tr>
+	</table>
+
+
+<div class="tabox">
+  <div class="hd">
+	<ul>
+	  <li class=" ">疯狂抢购</li>
+	  <li class=" ">猜您喜欢</li>
+	  
+	 
+	  <li class="on">新品上架</li></ul>
+  </div>
+  <div class="bd">
+	<ul class="lh" style="display: none;">
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu15.jpg"></a>
+		</div>
+		<div class="p-name">
+		  <a href=""> 恒都 菲力西冷牛排套餐 1.5kg/袋 调理牛排 草饲 10片装 含料包 一起吃，味更香 </a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥139.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu14.jpg"></a>
+		</div>
+		<div class="p-name">
+		  <a href="">小牛一郎 澳洲进口牛肉家庭牛排套餐超值装 4黑椒2菲力2西冷2儿童牛排 10片 1440g 年货节特惠 送2副刀叉 调</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥199.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu13.jpg"></a>
+		</div>
+		<div class="p-name">
+		  <a href="">百年栗园 密云水库土鸡 1000g/袋整只装 散养 【自营优选】谷物粮食散养，100天养殖周期，益五脏、补虚损、强筋骨，营养</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥39.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu20.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">百草味 全家的年夜饭1428g 坚果礼盒 年货干果零食大礼包 9袋装 1.11超级秒杀</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥12.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu16.jpg"></a>
+		</div>
+		<div class="p-name">
+		  <a href="">查干湖 冬捕胖头鱼礼盒 年货礼盒 查干湖胖头鱼4.6--5.5斤 ,顺丰包邮!可开增值票！</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥89.00</strong></div>
+	  </li>
+	</ul>
+	<ul class="lh" style="display: none;">
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu11.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">安钛克（Antec）VP 550P 额定550W 120mm静音风扇 主动PFC 黑化外型设计电源</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥399.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/goods (17).png" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">G.SKILL（芝奇）RipjawsX DDR3 1600 8G(4G×2条)台式机内存(F3-12800CL9D-8GBXL )</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥235.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu08.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">希捷（Seagate）1TB ST1000DM003 7200转64M SATA 6Gb/秒 台式机硬盘 建达蓝德 盒装正品</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥438.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu04.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">华硕(ASUS)P8Z77-V LK主板(Intel Z77/LGA 1155)</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥899.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu17.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">大水牛（BUBALUS）电脑机箱 经典-A1008 灰黑色（不含电源）</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥112.00</strong></div>
+	  </li>
+	</ul>
+	<ul class="lh" style="display: none;">
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu08.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">冬季健身TOP1！瑞亚特仰卧板加送俯卧撑架</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥187.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu07.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">HTC Z715e!双核！魔音耳机！</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥2399.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu20.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">下单返现150元！格力9片电油汀</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥449.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/.second_menu18.jpg" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">绿之源净味宝2居室除味超值套装 4000克</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥449.00</strong></div>
+	  </li>
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/goods (9).png" /></a>
+		</div>
+		<div class="p-name">
+		  <a href="">宏碁i5 4G GT630M 1G独显 月销量破</a></div>
+		<div class="p-price">优惠价：
+		  <strong>￥3599.00</strong></div>
+	  </li>
+	</ul>
+	<ul class="lh" style="display: none;">
+	  <li>
+		<div class="p-img ld">
+		  <a href="">
+			<img src="img/goods (8).png" /></a>
+            
+		</div>
+      
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	jQuery(".tabox").slide({delayTime: 0});
+</script>
+  
+<div style="text-align:center;clear:both;margin-top:80px">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+<div style=""></div>
+<!--商标栏-->
+<div class="brand"><div class="center w"></div></div>
+
+<!--底栏-->
+<footer>
+	<div class="center w">
+		<ul>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">服务条款</a></li>
+			<li><a href="#">网站地图</a></li>
+			<li><a href="#">帮助中心</a></li>
+			<li><a href="#">九城集团</a></li>
+			<li><a href="#">沱沱网</a></li>
+			<li><a href="#">企业员工内购</a></li>
+		</ul>
+		<p>Copyright &copy; 2009-2017 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号
+			京公网安备110105019943 食品流通许可证编号SP1101091310024845</p>
+	</div>
+</footer>
+</body>
+</html>

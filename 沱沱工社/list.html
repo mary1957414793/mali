@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>沱沱工社 -列表页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--提高网页在IE、谷歌上的运行性能-->
+    <meta name="renderer" content="webkit"><!--提高webkit内核的浏览器的运行性能-->
+    <!--搜索关键字-->
+    <meta name="keywords" content="有机食品,天然食品,绿色食品,有机,蔬菜水果,肉蛋禽奶,海鲜,水产,粮油,副食,
+    沱沱工社,沱沱网,沱沱">
+    <!--搜索到网站时显示的描述内容-->
+    <meta name="description" content="沱沱工社-中国首家专业提供有机食品,天然食品等生鲜类商品的B2C网上商
+    城,产品包括蔬菜,水果,鲜肉,冷冻肉,牛奶,蛋类,海产品,粮油副食等9大类300个小类,近万种商品.沱沱工社为您量
+    身打造有机,天然,高品质网上食品超市新体验">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><!--页面加载图标-->
+    <link rel="stylesheet" type="text/css" href="css/base-1.css">
+    <link rel="stylesheet" type="text/css" href="css/list.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <!--顶部栏-->
+    <div class="top">
+        <div class="center w">
+            <div class="left"><!--顶部栏左侧-->
+                <div class="wel">
+                    <label>欢迎光临沱沱工社！</label>
+                    <a href="login.html">登录</a>
+                    <a href="login.html">注册</a>
+                    <span>送货至：</span>
+                </div>
+                <!--城市选择框-->
+                <div id="city">
+                    <a href="#">北京  东城区<span><img src="img/city_choose.png"></span></a>
+                </div>
+            </div>
+            <!--顶部栏右侧-->
+            <div class="right">
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#"><span><img src="img/phone-1.png"></span>手机沱沱</a>
+                        <div class="box">
+                            <p>扫描二维码，下载沱沱工社客户端</p>
+                            <div class="app">
+                                <img src="img/iPhone.png">
+                                <img src="img/Android.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">我的沱沱<b><img src="img/lower.png" width="12"></b></a>
+                        <dl>
+                            <dt><a href="">我的订单</a></dt>
+                            <dt><a href="">我的收藏</a></dt>
+                            <dt><a href="">积分兑换</a></dt>
+                            <dt><a href="">优惠券</a></dt>
+                            <dt><a href="">我的地址库</a></dt>
+                            <dt><a href="">邀请好友</a></dt>
+                        </dl>
+                    </li>
+                    <li><a href="#">充值</a></li>
+                    <li><a href="#">提货</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索栏-->
+    <div class="find">
+        <div class="center w">
+            <div class="left">
+                <a href="index.html"><img src="img/icon.jpg"alt="沱沱工社" title="沱沱工社"></a>
+                <a href="index.html"><img class="pic" src="img/mother.jpg"></a>
+            </div>
+            <!--搜索框-->
+            <div class="serch">
+                <form action="post">
+                    <input class="word" type="text" placeholder="请输入关键词"><!--文本填入框-->
+                    <input class="sure" type="submit" value="搜索"><!--搜索按钮-->
+                </form>
+                <div class="hot">
+                    <p>热门搜索：
+                        <a href="#">农场蔬菜</a>
+                        <a href="#">鸡蛋</a>
+                        <a href="#">奇异果 </a>
+                        <a href="#">燕窝</a>
+                        <a href="#">西红柿</a>
+                        <a href="#">玉米</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="img/green.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏-->
+    <nav>
+        <div class="back"></div><!--黑背景-->
+
+
+        <div class="center w">
+            <!--商品分类-->
+            <div class="kinds">
+                <h1><a href="#">所有商品分类<span><img src="img/kinds.png" ></span></a></h1>
+                <!--侧栏-->
+                <div class="aside">
+                    <!--栏目1-->
+                    <dl>
+                        <dt><i class="icon01"></i><a href="list.html" class="fl">有机食品</a></dt>
+                        <dd>
+                            <div class="text">
+                                <p>有机蔬菜水果</p><span><a href="#">有机蔬菜</a><a href="#">有机水果</a></span>
+                            </div>
+                            <div class="text">
+                                <p>有机肉类禽蛋</p><span><a href="#">有机蛋类</a><a href="#">有机猪肉</a><a href="#">有机牛肉</a>
+                                <a href="#">有机禽类</a></span>
+                            </div>
+                            <div class="text">
+                                <p>有机粮油副食</p><span><a href="#">有机米面/杂粮</a><a href="#">有机调味品</a><a href="#">有机干货</a></span>
+                            </div>
+                        </dd>
+                    </dl>
+                    <!--栏目2-->
+                    <dl>
+                        <dt><i class="icon02"></i><a href="#" class="fl">蔬菜水果</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目3-->
+                    <dl>
+                        <dt><i class="icon03"></i><a href="#" class="fl">肉类禽蛋</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目4-->
+                    <dl>
+                        <dt><i class="icon04"></i><a href="#" class="fl">海鲜水产</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目5-->
+                    <dl>
+                        <dt><i class="icon05"></i><a href="#" class="fl">奶类/烘焙</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目6-->
+                    <dl>
+                        <dt><i class="icon06"></i><a href="#" class="fl">粮油副食</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目7-->
+                    <dl>
+                        <dt><i class="icon07"></i><a href="#" class="fl">休食冲饮</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目8-->
+                    <dl>
+                        <dt><i class="icon08"></i><a href="#" class="fl">生态日用</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+
+                </div>
+            </div>
+            <!--导航条-->
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">沱沱团</a></li>
+                <li><a href="#">沱沱礼品</a></li>
+                <li><a href="#">宅配卡</a></li>
+                <li><a href="#">沱沱农场</a></li>
+                <li><a href="#">入驻沱沱</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--主要内容-->
+    <div class="main">
+        <div class="center w">
+            <!--当前位置-->
+            <div class="address">
+                <a href="#">全部分类</a>&nbsp;>&nbsp;
+                <a href="#">蔬菜水果</a>&nbsp;>&nbsp;水果类
+            </div>
+            <!--分类列表-->
+            <div class="list">
+                <ul>
+                    <li><a href="#" class="first">蔬菜水果</a></li>
+                    <li><a href="#" class="inactive">蔬菜类</a>
+                        <ul style="display: none">
+                            <li><a href="#" class="inactive active">有机蔬菜</a>
+                                <ul>
+                                    <li><a href="#">国产有机蔬菜</a></li>
+                                    <li><a href="#">进口有机蔬菜</a></li>
+                                    <li><a href="#">特色有机蔬菜</a></li>
+                                </ul>
+                            </li>
+                            <li class="last"><a href="#">沱沱农场自产蔬菜</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="inactive">水果类</a>
+                        <ul style="display: none">
+                            <li class="last"><a href="#">有机水果</a></li>
+                            <li class="last"><a href="#">国产水果</a></li>
+                            <li class="last"><a href="#">进口水果</a></li>
+                            <li class="last"><a href="#">冷冻水果</a></li>
+                            <li class="last"><a href="#">热带水果</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('.inactive').click(function(){
+                        if($(this).siblings('ul').css('display')=='none'){
+                            $(this).parent('li').siblings('li').removeClass('inactives');
+                            $(this).addClass('inactives');
+                            $(this).siblings('ul').slideDown(100).children('li');
+                            if($(this).parents('li').siblings('li').children('ul').css('display')=='block'){
+                                $(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
+                                $(this).parents('li').siblings('li').children('ul').slideUp(100);
+
+                            }
+                        }else{
+                            //控制自身变成+号
+                            $(this).removeClass('inactives');
+                            //控制自身菜单下子菜单隐藏
+                            $(this).siblings('ul').slideUp(100);
+                            //控制自身子菜单变成+号
+                            $(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+                            //控制自身菜单下子菜单隐藏
+                            $(this).siblings('ul').children('li').children('ul').slideUp(100);
+
+                            //控制同级菜单只保持一个是展开的（-号显示）
+                            $(this).siblings('ul').children('li').children('a').removeClass('inactives');
+                        }
+                    })
+                });
+            </script>
+
+            <!--轮播-->
+            <div id="banner">
+                <div id="content">
+                    <div class="pic"><img src="img/list/pic-1.jpg"  height="340"></div>
+                    <div class="pic"><img src="img/list/pic-3.jpg"  height="340"></div>
+                    <div class="pic"><img src="img/list/pic-4.jpg"  height="340"></div>
+                    <div class="pic"><img src="img/list/pic-6.jpg"  height="340"></div>
+                    <div class="pic"><img src="img/list/pic-7.jpg"  height="340"></div>
+                </div>
+                <!--指示器-->
+                <ol id="circle">
+                    <li class="show"></li>
+                    <li class="cir"></li>
+                    <li class="cir"></li>
+                    <li class="cir"></li>
+                    <li class="cir"></li>
+                </ol>
+            </div>
+            <script type="text/javascript">
+                $(function(){
+
+                    var index=0;/*保存当前显示的轮播图片的索引*/
+                    var length=$("#content div").length;/*轮播图片的个数*/
+                    var t=setInterval(change,2000);
+
+                    function change(){
+                        index++;
+                        if(index==length){
+                            index=0;
+                        }
+                        //轮播图片切换
+                        $("#content div").eq(index).addClass("current").siblings().removeClass("current").addClass("pic");
+                        //指示器切换
+                        $("#circle li").eq(index).addClass("show").siblings().removeClass("show").addClass("cir");
+                    }
+
+                    //鼠标进入，暂停轮播；鼠标离开，开始轮播
+                    $("#banner").hover(function(){
+                        //鼠标悬浮在轮播区域，停止轮播
+                        clearInterval(t);
+                        $(".arrow").css("display","block");
+                    },function(){
+                        t=setInterval(change,3500);
+                        $(".arrow").css("display","none");
+                    });
+
+                    //指示器切换轮播图片
+                    $("#circle li").click(function(){
+                        $(this).addClass("show").siblings().removeClass("show").addClass("cir");
+                        index=$(this).index();
+                        $("#content div").eq(index).addClass("current").siblings().removeClass("current").addClass("pic");
+                    });
+
+
+                });
+            </script>
+
+            <!--热销商品推荐-->
+            <div class="hot">
+                <h1>热销商品推荐</h1>
+                <ul>
+                    <li><a href="#"><img src="img/list/photo-1.jpg"><p>加拿大熟冻龙虾400-450g/只</p><h2>&yen;98.00/只</h2></a></li>
+                    <li><a href="#"><img src="img/list/photo-2.jpg"><p>越南黑虎虾 净重400g/盒</p><h2>&yen;82.00/盒</h2></a></li>
+                    <li><a href="#"><img src="img/list/photo-3.jpg"><p>加拿大北极虾 400g/袋</p><h2>&yen;35.80/袋</h2></a></li>
+                    <li><a href="#"><img src="img/list/photo-4.jpg"><p>贝蒂斯橄榄油 750ml/瓶</p><h2>&yen;128.00/瓶</h2></a></li>
+                    <li><a href="#"><img src="img/list/photo-5.jpg"><p>元祖蛋糕 玫瑰圆舞曲（8寸）</p><h2>&yen;218.00/个</h2></a></li>
+                </ul>
+            </div>
+
+            <!--商品列表-->
+            <div class="goods">
+                <!--筛选标题-->
+                <div class="title">
+                    <ul>
+                        <li><a href="#" class="active">综合</a></li>
+                        <li><a href="#">销量</a><span><img src="img/lower.png" width="12"></span></li>
+                        <li><a href="#">价格</a><span><img src="img/lower.png" width="12"></span></li>
+                        <li><a href="#">最新</a><span><img src="img/lower.png" width="12"></span></li>
+                    </ul>
+                    <p>1/16</p>
+                    <a href="#" class="left"></a>
+                    <a href="#" class="right"></a>
+                </div>
+
+                <!--第一楼-->
+                <div class="f1">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/pic-1.jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/pic-5.jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/pic-6.jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/pic-8.jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(1).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(2).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(3).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(4).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(5).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(6).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(7).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(8).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(9).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(10).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(11).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(12).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(13).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(14).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(15).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(16).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(17).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(18).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(19).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(20).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(21).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(22).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(23).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(24).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(25).jpg" width="190" height="190"><h2>智利加力果6粒装  约0.9-1kg/盒</h2><p>¥78.00/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(26).jpg" width="190" height="190"><h2>进口黑提 约500g/份</h2><p>¥35.80/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(27).jpg" width="190" height="190"><h2>进口香蕉  约1kg/份</h2><p>¥15.60/份</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/list/photo%20(28).jpg" width="190" height="190"><h2>新奇士橙4粒装  约1kg/盒</h2><p>¥41.80/盒</p></a>
+                            <div class="text">
+                                <a href="#"><span></span>收藏</a>
+                                <a href="#"><span class="active"></span>加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!--翻页-->
+                <div class="next">
+                    <span class="one">1</span>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">尾页</a>
+                    <a class="fan" href="#">下一页</a>
+                    <span class="jump">
+                        <label>到第</label>
+                        <input type="number" min="1">
+                        <label>页</label>
+                        <button type="button">确定</button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--商标栏-->
+    <div class="brand"><div class="center w"></div></div>
+
+    <!--底栏-->
+    <footer>
+        <div class="center w">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">服务条款</a></li>
+                <li><a href="#">网站地图</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">九城集团</a></li>
+                <li><a href="#">沱沱网</a></li>
+                <li><a href="#">企业员工内购</a></li>
+            </ul>
+            <p>Copyright &copy; 2009-2017 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号
+                京公网安备110105019943 食品流通许可证编号SP1101091310024845</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

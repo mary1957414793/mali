@@ -1,0 +1,449 @@
+@charset "utf-8";
+/* CSS Document */
+/*顶部栏*/
+.top {
+    width: 100%;
+    height:30px;
+    background: #eee;
+}
+.top .center {
+    position: relative;
+}
+/*顶部栏左侧*/
+.top .center .left {
+    width: 30%;
+    height:30px;
+    line-height: 30px;
+    position: relative;
+}
+.top .center .left label {
+    color: #888;
+    font-size: 12px;
+}
+.top .center .left .wel a {
+    color: #888;
+    font-size: 12px;
+    padding: 6px;
+}
+.top .center .left .wel a:hover {
+    color: #9f1431;
+    background: #d9d9d9;
+    text-decoration: none;
+}
+/*城市选择框*/
+#city {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 70%;
+}
+#city a {
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    border: 1px solid #888;
+}
+#city a:hover {
+    color: #9f1431;
+}
+#city a span {
+    padding-left: 5px;
+}
+#city a span img {
+    margin-top: -3px;
+}
+
+/*顶部栏右侧*/
+.top .center .right {
+    width: 32%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 12;
+}
+.top .center .right ul li {
+    line-height: 30px;
+    float: left;
+    position:relative;
+    border-bottom:0 none;
+    box-sizing:content-box;
+}
+/*在li前方添加竖线*/
+.top .center .right ul li+li:before {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #888;
+    display:block;
+    overflow:hidden;
+    position:absolute;
+    top:10px;
+    left:-1px;
+}
+.top .center .right ul li a {
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 6px 15px;
+}
+.top .center .right ul li a:hover {
+    color: #9f1431;
+}
+.top .center .right ul li a span {
+    padding-right: 5px;
+}
+.top .center .right ul li a span img {
+    margin-top: -3px;
+}
+/*APP下载*/
+.top .center .right ul li .box {
+    width: 260px;
+    height: 144px;
+    background: #fff;
+    border:1px solid #eaeaea;
+    border-top:0 none;
+    padding:0 12px;
+    position:absolute;
+    left:-1px;
+    top:30px;
+    display: none;
+}
+.top .center .right ul li:hover .box {
+    display: block;
+}
+.top .center .right ul li .box p {
+    font-size: 14px;
+}
+.top .center .right ul li .box .app {
+    width: 100%;
+    height: 100px;
+    background: url(../img/APP-two.png) no-repeat 0px 0px;
+}
+.top .center .right ul li .box .app img {
+    padding: 8px 0 0 110px;
+    cursor: pointer;
+}
+/*下拉菜单*/
+.top .center .right ul li a b {
+    padding-left: 5px;
+}
+.top .center .right ul li a b img {
+    margin-top: -3px;
+    display: inline-block;
+    transition:all linear 0.5s;
+}
+/*让小三角旋转*/
+.top .center .right ul li:hover a b img {
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+/*隐藏下拉菜单*/
+.top .center .right ul li dl {
+    background: #fff;
+    border:1px solid #eaeaea;
+    border-top:0 none;
+    box-sizing:content-box;
+    display: none;
+}
+/*显示下拉菜单*/
+.top .center .right ul li:hover dl {
+    display: block;
+}
+.top .center .right ul li dl dt:hover {
+    background: #d9d9d9;
+}
+.top .center .right ul li dl dt:hover a {
+    color: #9f1431;;
+}
+
+/*搜索栏*/
+.find {
+    width: 100%;
+    height: 80px;
+}
+.find .center {
+    position: relative;
+}
+.find .center .left {
+    width: 30%;
+    margin-top: 16px;
+}
+.find .center .left a .pic {
+    margin-left: 15px;
+}
+/*搜索框*/
+.find .center .serch {
+    width: 37.5%;
+    height: 70px;
+    position: absolute;
+    top: 6px;
+    left: 37%;
+}
+.find .center .serch form {
+    width: 100%;
+    height: 44px;
+    background:#888;
+}
+.find .center .serch form input[type=text] {
+    width: 376px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    border:0 none;
+    padding-left:18px;
+    color:#b9b9b9;
+    float:left;
+    margin: 2px 0 0 2px;
+}
+.find .center .serch form input[type=submit] {
+    width: 72px;
+    height: 40px;
+    background:transparent;
+    border:0 none; float:left;
+    font-size:16px;
+    color:#fff;
+    font-weight: 600;
+    letter-spacing:5px;
+    cursor:pointer;
+    margin-top: 2px;
+}
+.find .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*主要内容*/
+.main {
+    width: 100%;
+    height: 600px;
+}
+.main .login {
+    height: 100%;
+    background: url("../img/login/login.jpg") no-repeat;
+}
+/*选项卡*/
+#tab{
+    width: 420px;
+    height: 408px;
+    float: right;
+    background: #fff;
+    margin-top: 50px;
+    margin-right: 55px;
+}
+#tab ul{
+    width: 210px;
+    height: 42px;
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 24px;
+}
+#tab ul li{
+    width: 102px;
+    height: 40px;
+    color: #888;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+}
+#tab ul li:hover{
+    cursor: pointer;
+}
+#tab ul .sel{
+    color: #fd6600;
+    border-bottom: 2px solid #fd6600;
+}
+#tab .back {
+    width: 380px;
+    height: 2px;
+    background: #d9d9d9;
+    margin: 0 auto;
+    margin-top: -4px;
+}
+#content div{
+    clear: both;
+    width: 420px;
+    height: 340px;
+    display: none;
+}
+#content .main{
+    display: block;
+}
+#content div label {
+    width: 304px;
+    height: 250px;
+    margin: 10px auto;
+    display: block;
+}
+#content div label a {
+    color: #fd6600;
+    font-size: 12px;
+    float: right;
+}
+#content div label form {
+    width: 100%;
+    height: 200px;
+}
+#content div label form h1{
+    width: 38px;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-right: 0 none;
+    margin-top: 20px;
+    background: #eee url("../img/login/icon-1.png") no-repeat;
+}
+#content div label form span {
+    margin-top: 20px;
+}
+#content div label form span input[type=text] {
+    width: 266px;
+    height: 40px;
+    float: right;
+    color: #d9d9d9;
+    padding-left: 10px;
+    margin-top: -40px;
+    border: 1px solid #d9d9d9;
+}
+#content div label form h2{
+    width: 38px;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-right: 0 none;
+    margin-top: 10px;
+    background: #eee url("../img/login/icon-2.png") no-repeat;
+}
+#content div label form i {
+    margin-top: 10px;
+}
+#content div label form i input[type=text] {
+    width: 266px;
+    height: 40px;
+    float: right;
+    color: #d9d9d9;
+    padding-left: 5px;
+    margin-top: -40px;
+    border: 1px solid #d9d9d9;
+}
+#content div label form .forget {
+    margin-top: -10px;
+}
+#content div label form input[type="button"]{
+    width: 100%;
+    height: 46px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 微软雅黑;
+    background: #ff6a00;
+    border: 0 none;
+    border-radius: 5px;
+    margin-top: -8px;
+}
+#content div label ol {
+    height: 12px;
+    float: left;
+    padding: 0 12px;
+    line-height: 12px;
+    border-right: 1px solid #888;
+}
+#content div label .first {
+    padding-left: 0;
+}
+#content div label ol:last-child {
+    border-right: 0 none;
+}
+#content div label ol a {
+    color: #888;
+}
+#content div label ol a:hover {
+    color: #fd6600;
+}
+#enroll form {
+    width: 304px;
+    height: 280px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+#enroll form input[type=text] {
+    width: 100%;
+    height: 40px;
+    color: #d9d9d9;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 1px solid #d9d9d9;
+}
+#enroll form .num[type=text] {
+    width: 112px;
+    float: left;
+}
+#enroll form i {
+    width: 60px;
+    height: 20px;
+    display:block;
+    float: left;
+    margin: 20px 0 0 26px;
+    background: url("../img/login/num.png") no-repeat;
+}
+#enroll form a {
+    float: right;
+    color: #fd6600;
+    margin-top: 20px;
+}
+#enroll form input[type="button"]{
+    width: 100%;
+    height: 46px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 微软雅黑;
+    background: #ff6a00;
+    border: 0 none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/*底栏*/
+footer {
+    width: 100%;
+    height: 70px;
+    background: #eee;
+    margin-top: 30px;
+}
+footer .center {
+    padding-top: 20px;
+}
+footer .center ul {
+    width: 82%;
+    height: 20px;
+    margin: 0 auto;
+}
+footer .center ul li {
+    height: 14px;
+    float: left;
+    padding: 0 35px;
+    line-height: 14px;
+    border-left: 1px solid #888;
+}
+footer .center ul li:first-child {
+    border-left: 0 none;
+}
+footer .center ul li a {
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+}
+footer .center ul li a:hover {
+    color: #9f1431;
+}
+footer .center p {
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+}

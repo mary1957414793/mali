@@ -1,0 +1,76 @@
+body{overflow-x: hidden;}
+/*头部*/
+header1{ width:100%; height:481px;}
+header1 .top{ width:100%; height:115px; margin:0 auto;}
+header1 .top h1{ width:154px; height:95px; float:left; padding-top:20px; padding-left:130px;}
+header1 .top nav{ width:760px; height:115px; float:left; padding-left:200px; }
+header1 .top nav li{width:126px; height:115px; line-height:115px; text-align:center; float:left;}
+header1 .top nav .on a{ width:126px; height:115px; display:block; background:#fe721a; color:#fff;}
+header1 .top nav li a{width:126px; height:115px; display:inline-block; color:#6d6c6b;}
+header1 .top nav li a:hover{ background:#fe721a; color:#fff;}
+header1 .banner{ width:100%; height:367px; overflow:hidden; position:relative;}
+header1 .banner img{display:block; position:absolute; left:-270px;}
+/*主体*/
+.main{ width:100%; height:auto;}
+.main .qw{width:100%;height:auto;}
+.main .qw img{margin:60px auto; padding-left:305px;}
+.main .title{ width:160px; height:62px; margin:0 auto;  text-align:center; margin-top:-130px;}
+.main .title h3{ font-size:30px; font-family:"微软雅黑"; color:#cccccc; font-weight:normal;}
+.main .title h3 span{font-size:30px; font-family:"微软雅黑"; color:#000000; font-weight:normal;}
+.main .ka{ width:350px; height:40px; margin-left:-100px; padding-top:80px; padding-bottom:40px;margin:0 auto;}
+.main .ka li{ width:95px; height:30px; text-align:center; float:left;cursor: pointer;padding-top: 5px;
+	border:2px solid #ededed;}
+.main .ka .active{background:#ff6600;color:#fff;}
+.main .current{display:none;}
+.main .show{display: block;}
+.main p{ width:1200px; height:51px; margin:0px auto; font-size:14px; line-height:25px; font-family:"微软雅黑"; 
+font-weight:normal; color:#000000; text-align:left; }
+
+.main .photo1{ width:100%; height:547px;}
+.main .photo1 ul{ width:1300px; height:547px; float:left; padding-left:40px;}
+.main .photo1 ul li{ width:390px; height:547px; float:left; border: 1px solid rgba(153,153,153,1); padding-top:10px; overflow:hidden;}
+.main .photo1 img{ width:370px; height:349px; transition:1s; }
+.main .photo1 h3{ font-size:18px; font-family:"微软雅黑"; color:#000000; font-weight:normal; text-align:left; padding-left:10px; padding-top:30px;}
+.main .photo1 h3 span { font-size:14px; font-family:"微软雅黑"; color:#000000; font-weight:normal; text-align:left; }
+.main .photo1 ul .photo2{ width:390px; height:547px; float:left; margin-left:30px; position: relative;}
+.main .photo1 .photo2 img{ width:370px; height:165px; margin-bottom:15px; }
+.main .photo1 .photo2 img:nth-child(2){ margin-bottom:0px;}
+.main .photo1 ul .photo3{ width:390px; height:547px; float:left; margin-left:30px;}
+.main .photo1 ul li:hover img{ transform:scale(1.1,1.1)}
+/*设计理念*/
+.main p{line-height:25px;text-indent: 2rem;}
+.main dl{width:398px;height:498px;border:1px solid #fff;float: left;margin:20px 10px;position:relative;}
+.main dl dt{width:100%;height:200px;}
+.main dl dt img{width:100%;height: auto;}
+.main dl dd{width:100%;height:200px;margin-top:20px;position: absolute;bottom:0px;}
+.main dl dd span{width:100%;height:50px;font-size:18px;margin-left:20px;}
+.main dl dd p{width:100%;height:150px;margin-top:30px;text-align: left;}
+.main dl:hover{border:1px solid #ff6600;}
+/*企业文化*/
+.main .wen{ width:1202px; height:135px; text-align:center; margin:0 auto;}
+.main .wen p{ font-size:14px; font-family:"微软雅黑"; color:#000000; font-weight:normal; line-height:25px; 
+text-indent:2em;}
+.main .tp{ width:1218px; height:205px; margin-left:60px; margin-top:-20px; position:absolute; transition:ease-in-out 1s;}
+.main .tp ul{width:1218px; height:203px; float:left;}
+.main .tp ul li{ width:282px; height:203px; float:left; perspective:500px;  transform-style:preserve-3d; transform:rotatey(0deg); transition:ease-out 2s;}
+.main .tp li:hover{ transform:rotatey(360deg);}
+.main .zi{ width:1202px; height:151px; margin-top:220px;}
+.main .zi ul{ width:1202px; height:151px; float:left;}
+.main .zi ul li{ width:281px; height:151px; float:left; margin-left:100px;}
+.main .zi  li h3{ font-size:18px; font-family:"微软雅黑"; color:#000000; font-weight:normal; text-align:left;
+ padding-left:60px; padding-top:30px;}
+.main .zi  li h3 span { font-size:14px; font-family:"微软雅黑"; color:#000000; font-weight:normal; text-align:left; }
+/*脚部*/
+footer{ width:100%; height:379px; background:url(../images/last_bg.png) no-repeat top center; clear:both;}
+footer .wenzi_l{ width:260px; height:99px; padding-top:130px; padding-left:200px;}
+footer .wenzi_l p{ font-size:26px; font-family:"微软雅黑"; font-weight:normal; color:#ff6000;}
+footer .wenzi_l p span{ font-size:26px; font-family:"微软雅黑"; font-weight:normal; color:#bbbbbb; line-height:26px;}
+footer .wenzi_l  h3{ font-size:14px; font-family:"微软雅黑"; font-weight:normal; color:#bbbbbb; padding-left:190px; margin-top:-20px; }
+footer .wenzi_l h2{font-size:14px; font-family:"微软雅黑"; font-weight:normal; color:#bbbbbb;}
+footer .wenzi_l h2 span{font-size:18px; font-family:"微软雅黑"; font-weight:normal; color:#bbbbbb; margin-top:20px;}
+footer .wenzi_r{ width:233px; height:97px; float:right; margin-top:-90px; margin-right:240px;}
+footer .wenzi_r h3{font-size:18px; font-family:"微软雅黑"; font-weight:normal; color:#bbbbbb; margin-left:160px;}
+footer .wenzi_r ul{width:400px; height:53px; padding-top:26px; }
+footer .wenzi_r li{ width:53px; height:53px; float:left; margin-right:20px;cursor:pointer; }
+footer  .last{ width:575px; margin-top:110px; margin-left:350px;}
+footer  .last p{ font-size:14px; color:#bbbbbb; font-family:"微软雅黑"; font-weight:normal; text-align:center; }

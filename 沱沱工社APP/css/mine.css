@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+/*header*/
+body {
+	background: #fff;
+}
+header {
+	width: 7.5rem;
+	height: 2.06rem;
+	margin: 0 auto;
+	padding-top: 0.7rem;
+	background: url(../images/%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E8%83%8C%E6%99%AF.jpg) no-repeat top center;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-size: cover;
+}
+header .header_l {
+	width: 14%;
+	height: 0.96rem;
+	float: left;
+	margin-right: 0.15rem;
+}
+header .header_l img {
+	width: 0.96rem;
+	height: 0.96rem;
+}
+header .header_m {
+	width: 70%;
+	height: 1.06rem;
+	float: left;
+	margin-right: 0.1rem;
+}
+header .header_m h3 {
+	font-size: 0.33rem;
+	font-family: "微软雅黑";
+}
+header .header_m h3 span {
+	font-size: 0.25rem;
+}
+header .header_m h3 span a {
+	font-size: 0.2rem;
+	width: 3.3rem;
+	height: 0.4rem;
+	color: #ff6a00;
+	border: 0.01rem solid #ff6a00;
+	border-radius: 0.5rem;
+	padding: 0.06rem;
+}
+header .header_r {
+	float: left;
+	width: 10%;
+	height: 0.79rem;
+}
+header .header_r img {
+	width: 0.79rem;
+	height: 0.79rem;
+}
+/*header end*/
+/*nav*/
+.nav {
+	width: 7.5rem;
+	height: 2.28rem;
+	margin: 0 auto;
+}
+.nav ul {
+	width: 7.5rem;
+	height: 2.28rem;
+	padding-top: 0.34rem;
+}
+.nav ul li {
+	width: 20%;
+	height: 2.28rem;
+	float: left;
+	text-align: center;
+	font-size: 0.24rem;
+}
+.nav ul li a {
+	width: 0.96rem;
+	height: 0.96rem;
+	margin: 0 auto;
+	display: block;
+	background: url(../images/hyz-list-icon1.png) no-repeat center center;
+	border-radius: 0.5rem;
+	background-size: contain;
+}
+.nav ul li:nth-child(2) a {
+	background: url(../images/hyz-list-icon2.png) no-repeat center center;
+	border-radius: 0.5rem;
+	background-size: contain;
+}
+.nav ul li:nth-child(3) a {
+	background: url(../images/hyz-list-icon3.png) no-repeat center center;
+	border-radius: 0.5rem;
+	background-size: contain;
+}
+.nav ul li:nth-child(4) a {
+	background: url(../images/hyz-list-icon4.png) no-repeat center center;
+	border-radius: 0.5rem;
+	background-size: contain;
+}
+.nav ul li:nth-child(5) a {
+	background: url(../images/hyz-list-icon5.png) no-repeat center center;
+	border-radius: 0.5rem;
+	background-size: contain;
+}
+.box {
+	width: 7.5rem;
+	height: 0.12rem;
+	background: #f1f1f1;
+	border-top: 0.01rem solid #d9d9d9;
+	border-bottom: 0.01rem solid #d9d9d9;
+	margin: 0 auto;
+}
+/*nav end*/
+/*card*/
+.card {
+	width: 7.5rem;
+	height: 1.78rem;
+	margin: 0 auto;
+}
+.card ul {
+	width: 7.5rem;
+	height: 1.78rem;
+	padding-top: 0.4rem;
+}
+.card ul li {
+	width: 25%;
+	float: left;
+	color: #dbdbdb;
+	font-size: 0.32rem;
+	text-align: center;
+}
+.card ul li:last-child {
+	color: #000000;
+}
+.card ul li a {
+	font-size: 0.24rem;
+}
+/*card end*/
+/*about*/
+.about {
+	width: 7.5rem;
+	height: 6rem;
+	margin: 0 auto;
+}
+.about ul {
+	width: 7.5rem;
+	height: auto;
+}
+.about ul li {
+	width: 33.3%;
+	height: 1.76rem;
+	border-top: 0.01rem solid #f0f0f0;
+	border-right: 0.01rem solid #f0f0f0;
+	float: left;
+	text-align: center;
+	font-size: 0.24rem;
+	padding-top: 0.4rem;
+}
+.about ul li:nth-child(3n) {
+	border-right: 0 none;
+}
+.about ul li a {
+	width: 0.55rem;
+	height: 0.44rem;
+	display: block;
+	margin: 0 auto;
+	background: url(../images/ia_09.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(2) a {
+	width: 0.63rem;
+	height: 0.44rem;
+	background: url(../images/ia_03.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(3) a {
+	width: 0.4rem;
+	height: 0.44rem;
+	background: url(../images/ia_06.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(4) a {
+	width: 0.6rem;
+	height: 0.44rem;
+	background: url(../images/ia_18.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(5) a {
+	width: 0.54rem;
+	height: 0.44rem;
+	background: url(../images/ia_15.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(6) a {
+	width: 0.46rem;
+	height: 0.44rem;
+	background: url(../images/ia_21.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(7) a {
+	width: 0.54rem;
+	height: 0.44rem;
+	background: url(../images/ia_29.png) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(8) a {
+	width: 0.60rem;
+	height: 0.44rem;
+	background: url(../images/ia_27.jpg) no-repeat center center;
+	background-size: contain;
+}
+.about ul li:nth-child(9) a {
+	width: 0.48rem;
+	height: 0.44rem;
+	background: url(../images/ia_32.jpg) no-repeat center center;
+	background-size: contain;
+}
+/*about* end/
+
+
+/*底部*/
+footer {
+	width: 100%;
+	height: 0.98rem;
+	position:fixed;/*参照物*/
+	z-index:11;
+	bottom:0;
+	background: #fff;
+	border-top: 0.01rem solid #d9d9d9;
+}
+footer ul li {
+	width: 25%;
+	color: #969696;
+	text-align: center;
+	font-size: 0.24rem;
+	float: left;
+	padding: 0.09rem 0 0.08rem 0;
+}
+footer ul li a img{
+	width: 0.5rem;
+	height: 0.5rem;
+	display: block;
+	margin: 0 auto;
+}
+footer ul li .icon {
+	color: #646464;
+}
+footer ul .active a{
+	color: #a8d00b;
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--禁止浏览器从本地缓存中调阅页面;网页不保存在缓存中，每次访问都刷新页面-->
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+
+    <!--禁止百度转码 贴广告-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--手机号码不被显示为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+
+    <!--顶部状态条的颜色，在web app应用状态条（屏幕顶部条）的颜色；default白色 black黑色 black-translucent灰色半透明-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--说明：网站开启对web app程序的支持-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--解决uc浏览器在识别到页面文字很多的情况下会自动放大字体优化阅读体验   关闭-->
+    <meta name="wap-font-scale" content="no">
+
+    <!--"添加到主屏幕“后，全屏显示 <meta name="apple-mobile-web-app-capable" content="yes" />
+    这meta的作用就是删除默认的苹果工具栏和菜单栏。content有两个值”yes”和”no”,当我们需要显示工具栏和菜单栏时，这个行meta就不用加了，默认就是显示。-->
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <!--如果网页适合在移动设备上进行浏览  终端适配 应该是在移动端日益增长的流量的大势下产生的需求-->
+    <meta name="applicable-device" content="mobile">
+
+    <!---手机端点击时，禁止出现灰色区域的方法-->
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="有机食品,天然食品,绿色食品,有机,蔬菜水果,肉蛋禽奶,海鲜,水产,粮油,副食,
+    沱沱工社,沱沱网,沱沱">
+    <meta name="description" content="沱沱工社-中国首家专业提供有机食品,天然食品等生鲜类商品的B2C网上商
+    城,产品包括蔬菜,水果,鲜肉,冷冻肉,牛奶,蛋类,海产品,粮油副食等9大类300个小类,近万种商品.沱沱工社为您量
+    身打造有机,天然,高品质网上食品超市新体验">
+    <title>APP</title>
+    <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+</head>
+    <!--头部-->
+    <header>
+        <!--城市选择框-->
+        <div id="city">
+            <a href="#">郑州市<img src="images/icon-three.png" ></a>
+        </div>
+        <!--搜索框-->
+        <form action="" method="post">
+            <a class="serch" href="#"><img src="images/搜索.png"><input type="text" placeholder="搜索优选商品"></a>
+        </form>
+        <!--二维码-->
+        <a href="#" class="code"><img src="images/扫一扫.png" ></a>
+    </header>
+
+    <!--轮播-->
+    <div id="banner" class="banner">
+        <div class="swiper-container swiper-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/banner-1.jpg"></div>
+                <div class="swiper-slide"><img src="images/banner-2.jpg"></div>
+                <div class="swiper-slide"><img src="images/banner-3.jpg"></div>
+                <div class="swiper-slide"><img src="images/banner-8.jpg"></div>
+                <div class="swiper-slide"><img src="images/banner-11.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination banner-pagination"></div>
+        </div>
+    </div>
+    <script>
+        var mySwiper = new Swiper ('.swiper-banner', {
+            direction: 'horizontal',
+            loop: true,
+            // 如果需要分页器
+            pagination: '.banner-pagination',
+            paginationClickable:true,
+            autoplay : 3000,
+        });
+    </script>
+
+    <!--导航-->
+    <nav>
+        <ul>
+            <li> <a href="#"><img src="images/first-9.png"></a>
+                <p><a href="#">优选会员</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-8.png"></a>
+                <p><a href="#">摇优惠</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-3.png"></a>
+                <p><a href="#">一小时达</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-2.png"></a>
+                <p><a href="#">教你做菜</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-7.png"></a>
+                <p><a href="#">全球美食</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-4.png"></a>
+                <p><a href="#">酒水饮料</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-1.png"></a>
+                <p><a href="#">肉食</a></p>
+            </li>
+            <li> <a href="#"><img src="images/first-5.png"></a>
+                <p><a href="#">海鲜</a></p>
+            </li>
+            <li><a href="#"><img src="images/first-10.png"></a>
+                <p><a href="#">水果</a></p>
+            </li>
+            <li><a href="#"><img src="images/first-6.png"></a>
+                <p><a href="#">零食</a></p>
+            </li>
+        </ul>
+    </nav>
+
+    <!--优选快报-->
+    <div class="notice">
+        <h1><span>优选</span><b>快报</b><i>&nbsp;:</i></h1>
+        <!--新闻-->
+        <div id="news">
+            <div class="swiper-container swiper-news">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#">调整新疆地区销售商品的通知</a></div>
+                    <div class="swiper-slide"><a href="#">热烈祝贺三只松鼠集团旗舰店入驻<br>
+                        <span style="color:rgba(255,102,102,1);">沱沱工社</span></a></div>
+                    <div class="swiper-slide"><a href="#">夏日冰爽水果，总是拥有撩人诱惑</a></div>
+                    <div class="swiper-slide"><a href="#">即将推出的9部新动画电影！你最期待哪部</a></div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper('.swiper-news', {
+                direction: 'vertical',
+                slidesPerView: 1,
+                mousewheelControl: true,
+                autoplay : 2000,
+                loop: true,
+            });
+        </script>
+    </div>
+
+    <!--优选会员-->
+    <div class="member">
+        <a href="#" class="user"><img src="images/优选.jpg"></a>
+        <ul>
+            <li>
+                <a><img src="images/pic-1.jpg"><h1>传奇波尔多法定...</h1><p>￥108.00</p></a>
+                <div class="title"><span>会员价</span><h2>￥119.00</h2></div>
+            </li>
+            <li>
+                <a><img src="images/pic-2%20(2).jpg"><h1>传奇波尔多法定...</h1><p>￥108.00</p></a>
+                <div class="title"><span>会员价</span><h2>￥119.00</h2></div>
+            </li>
+            <li>
+                <a><img src="images/pic-3.jpg"><h1>传奇波尔多法定...</h1><p>￥108.00</p></a>
+                <div class="title"><span>会员价</span><h2>￥119.00</h2></div>
+            </li>
+            <li>
+                <a><img src="images/pic-4.jpg"><h1>传奇波尔多法定...</h1><p>￥108.00</p></a>
+                <div class="title"><span>会员价</span><h2>￥119.00</h2></div>
+            </li>
+            <li>
+                <a><img src="images/pic-6.jpg"><h1>传奇波尔多法定...</h1><p>￥119.00</p></a>
+                <div class="title"><span>会员价</span><h2>￥119.00</h2></div>
+            </li>
+            <li>
+                <a><img src="images/pic-5.jpg"><h1>传奇波尔多法定...</h1><p>￥108.00</p></a>
+                <div class="title"><span>会员价</span><h2>￥119.00</h2></div>
+            </li>
+        </ul>
+    </div>
+
+    <!--必买清单-->
+    <div class="buy">
+        <!--必买头部-->
+        <div class="title">
+            <img src="images/floor-bg01.jpg">
+            <h3>必买清单</h3>
+            <p>店庆518&nbsp;&nbsp;优质爆品精选</p>
+        </div>
+
+        <!--必买内容-->
+        <dl class="first">
+            <dt><a href="#"><img src="images/pic-10.jpg"><h4>XO 特级威士忌 330ml</h4><p>口感清醇 深受青年青睐</p></a></dt>
+            <dd><p>￥159.00</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#"><img src="images/pic-11.jpg"><h4>健达 KinderJOY 牛排 1080g</h4><p>经典之选 开启美味时光</p></a></dt>
+            <dd><p>￥128.00</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#"><img src="images/pic-10%20(2).jpg"><h4>顶诺 台式原味鸡胸肉 鸡扒 150g</h4><p>全程溯源 品质更有保障</p></a></dt>
+            <dd><p>￥13.80</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#"><img src="images/pic-11%20(2).jpg"><h4>顶诺 台式黄焖鸡翅 350g</h4><p>口感清醇 深受青年青睐</p></a></dt>
+            <dd><p>￥25.80</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <a href="#" class="more">查看更多&nbsp;&gt;</a>
+    </div>
+
+    <!--品牌优选-->
+    <div class="brand">
+        <!--品牌头部-->
+        <div class="title">
+            <img src="images/floor-bg02.png">
+            <h3>品牌优选</h3>
+            <p>用心甄选全球优质美食</p>
+        </div>
+        <!--品牌中部-->
+        <div class="center">
+            <img src="images/pic-8.jpg">
+            <div class="word">
+                <img src="images/潮香村.jpg">
+                <h4>潮香村</h4>
+                <p>融合中西饮食文化,打造精致厨房</p>
+            </div>
+        </div>
+        <!--品牌商品-->
+        <div class="goods">
+            <div class="swiper-container swiper-seconds">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/pic-12%20(2).jpg"><p class="name">风味鸡翅</p><i>味道浓香</i>
+                        <div class="price"><p>￥28.50</p><b>会员价￥25.00</b> </div></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/pic-13%20(2).jpg"><p class="name">法式红酒羊排</p><i>法式风味</i>
+                        <div class="price"><p>￥66.00</p><b>会员价￥59.90</b> </div></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/pic-14%20(2).jpg"><p class="name">澳洲果木牛排</p><i>柔嫩爽滑</i>
+                        <div class="price"><p>￥32.80</p><b>会员价￥27.60</b> </div></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/pic-15.jpg"><p class="name">澳洲烧烤牛排</p><i>营养好吃</i>
+                        <div class="price"><p>￥38.50</p><b>会员价￥29.90</b> </div></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/pic-16.jpg"><p class="name">风味鸡翅</p><i>味道浓香</i>
+                        <div class="price"><p>￥28.50</p><b>会员价￥25.00</b> </div></a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination seconds-pagination"></div>
+            </div>
+        </div>
+        <!--seconds_con end-->
+        <script>
+            var swiper = new Swiper('.swiper-seconds', {
+                slidesPerView: 3.5,
+                centeredSlides: false,
+                paginationClickable: true,
+                spaceBetween:10,
+                grabCursor: true
+            });
+        </script>
+
+    </div>
+
+    <!--镇店之宝-->
+    <div class="shop">
+        <!--镇店头部-->
+        <div class="title">
+            <img src="images/floor-bg02.png">
+            <h3>镇店之宝</h3>
+            <p>挚爱优选 给你更好</p>
+
+        </div>
+        <div class="image"><img src="images/pic-9.jpg"></div>
+        <!--镇店商品-->
+        <dl class="first">
+            <a href="#" class="image"><img src="images/pic-13.jpg"></a>
+            <dt><a href="#"><h4>GUOLIAN 珍珠鲜虾仁71/90 800g</h4></a><p>急速锁鲜  清新弹牙</p></dt>
+            <dd><p>￥99.00</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <dl>
+            <a href="#" class="image"><img src="images/pic-14.jpg"></a>
+            <dt><a href="#"><h4>纷赋 黄袋鼠梅洛红葡萄酒 750ml/瓶</h4></a><p>口感圆润  果香浓郁</p></dt>
+            <dd><p>￥118.00</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <dl>
+            <a href="#" class="image"><img src="images/pic-20.jpg"></a>
+            <dt><a href="#"><h4>新西兰佳沛金果22粒 140~180g</h4></a><p>清甜多汁  细腻爽滑</p></dt>
+            <dd><p>￥228.00</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <dl>
+            <a href="#" class="image"><img src="images/pic-19.jpg"></a>
+            <dt><a href="#"><h4>艾菲堡 梅洛红葡萄酒 750ml/瓶</h4></a><p>口感圆润  果香浓郁</p></dt>
+            <dd><p>￥108.00</p><a href="#"><img src="images/buy.png"></a></dd>
+        </dl>
+
+        <a href="#" class="more">查看更多&nbsp;&gt;</a>
+    </div>
+
+    <!--广告-->
+    <div class="ad">
+        <img src="images/魅力挪威.jpg">
+        <img src="images/优选酒窖.jpg">
+        <div class="pull"><span><img src="images/pull-up.png"></span>上拉加载更多</div>
+    </div>
+
+    <!--底部-->
+    <footer>
+        <ul>
+            <li class="active"> <a href="#" class="icon"><img src="images/首页.png">首页</a> </li>
+            <li> <a href="#" class="icon"><img src="images/分类.png">分类</a> </li>
+            <li> <a href="#" class="icon"><img src="images/购物车.png">购物车</a> </li>
+            <li> <a href="#" class="icon"><img src="images/首页-我的优选.png">我的沱沱</a> </li>
+        </ul>
+    </footer>
+<!--滚动屏幕到一定距离后 头部搜索框变化-->
+
+<script type="text/javascript">
+    window.onload = function(){
+        search();
+    };
+    /*头部搜索*/
+    var search = function(){
+        /*搜索框对象*/
+        var search = document.getElementsByClassName('header')[0];
+        /*banner对象*/
+        var banner = document.getElementsByClassName('banner')[0];
+        /*高度*/
+        var height = banner.offsetHeight;
+
+        window.onscroll = function(){
+            var top = document.body.scrollTop;
+            /*当滚动高度大于banner的高度时候颜色不变*/
+            if(top > height){
+                search.style.background  = "rgba(168,208,11,0.8)";
+            }else{
+                var op = top/height * 0.8;
+                search.style.background  = "rgba(168,208,11,"+op+")";
+            }
+        };
+    };
+</script>
+<body>
+
+</body>
+</html>

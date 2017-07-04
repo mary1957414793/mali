@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>沱沱工社 -首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--提高网页在IE、谷歌上的运行性能-->
+    <meta name="renderer" content="webkit"><!--提高webkit内核的浏览器的运行性能-->
+    <!--搜索关键字-->
+    <meta name="keywords" content="有机食品,天然食品,绿色食品,有机,蔬菜水果,肉蛋禽奶,海鲜,水产,粮油,副食,
+    沱沱工社,沱沱网,沱沱">
+    <!--搜索到网站时显示的描述内容-->
+    <meta name="description" content="沱沱工社-中国首家专业提供有机食品,天然食品等生鲜类商品的B2C网上商
+    城,产品包括蔬菜,水果,鲜肉,冷冻肉,牛奶,蛋类,海产品,粮油副食等9大类300个小类,近万种商品.沱沱工社为您量
+    身打造有机,天然,高品质网上食品超市新体验">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><!--页面加载图标-->
+    <link rel="stylesheet" type="text/css" href="css/base-1.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+    <!--顶部栏-->
+    <div class="top">
+        <div class="center w">
+            <div class="left"><!--顶部栏左侧-->
+                <div class="wel">
+                    <label>欢迎光临沱沱工社！</label>
+                    <a href="login.html">登录</a>
+                    <a href="login.html">注册</a>
+                    <span>送货至：</span>
+                </div>
+                <!--城市选择框-->
+                <div id="city">
+                    <a href="#">北京  东城区<span><img src="img/city_choose.png"></span></a>
+                </div>
+            </div>
+            <!--顶部栏右侧-->
+            <div class="right">
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#"><span><img src="img/phone-1.png"></span>手机沱沱</a>
+                        <div class="box">
+                            <p>扫描二维码，下载沱沱工社客户端</p>
+                            <div class="app">
+                                <img src="img/iPhone.png">
+                                <img src="img/Android.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">我的沱沱<b><img src="img/lower.png" width="12"></b></a>
+                        <dl>
+                            <dt><a href="shopping.html">我的订单</a></dt>
+                            <dt><a href="">我的收藏</a></dt>
+                            <dt><a href="">积分兑换</a></dt>
+                            <dt><a href="">优惠券</a></dt>
+                            <dt><a href="">我的地址库</a></dt>
+                            <dt><a href="">邀请好友</a></dt>
+                        </dl>
+                    </li>
+                    <li><a href="#">充值</a></li>
+                    <li><a href="#">提货</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索栏-->
+    <div class="find">
+        <div class="center w">
+            <div class="left">
+                <a href="#"><img src="img/icon.jpg"alt="沱沱工社" title="沱沱工社"></a>
+                <a href="#"><img class="pic" src="img/mother.jpg"></a>
+            </div>
+            <!--搜索框-->
+            <div class="serch">
+                <form action="post">
+                    <input class="word" type="text" placeholder="请输入关键词"><!--文本填入框-->
+                    <input class="sure" type="submit" value="搜索"><!--搜索按钮-->
+                </form>
+                <div class="hot">
+                    <p>热门搜索：
+                        <a href="#">农场蔬菜</a>
+                        <a href="#">鸡蛋</a>
+                        <a href="#">奇异果 </a>
+                        <a href="#">燕窝</a>
+                        <a href="#">西红柿</a>
+                        <a href="#">玉米</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="img/green.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏-->
+    <nav>
+        <div class="back"></div><!--黑背景-->
+
+        <!--轮播-->
+        <div id="banner">
+            <div id="content">
+                <div class="current"><img src="img/banner-1.jpg"  height="314"></div>
+                <div class="pic"><img src="img/banner-6.jpg"  height="314"></div>
+                <div class="pic"><img src="img/banner-3.jpg"  height="314"></div>
+                <div class="pic"><img src="img/banner-4.jpg"  height="314"></div>
+                <div class="pic"><img src="img/banner-5.jpg"  height="314"></div>
+            </div>
+            <!--指示器-->
+            <ol id="circle">
+                <li class="show"></li>
+                <li class="cir"></li>
+                <li class="cir"></li>
+                <li class="cir"></li>
+                <li class="cir"></li>
+            </ol>
+            <!--箭头-->
+            <div id="arr">
+                <img src="img/arrow-left.png"  id="imgLeft" class="arrow">
+                <img src="img/arrow-right.png" id="imgRight" class="arrow">
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+
+                var index=0;/*保存当前显示的轮播图片的索引*/
+                var length=$("#content div").length;/*轮播图片的个数*/
+                var t=setInterval(change,2000);
+
+                function change(){
+                    index++;
+                    if(index==length){
+                        index=0;
+                    }
+                    //轮播图片切换
+                    $("#content div").eq(index).addClass("current").siblings().removeClass("current").addClass("pic");
+                    //指示器切换
+                    $("#circle li").eq(index).addClass("show").siblings().removeClass("show").addClass("cir");
+                }
+
+                //鼠标进入，暂停轮播；鼠标离开，开始轮播
+                $("#banner").hover(function(){
+                    //鼠标悬浮在轮播区域，停止轮播
+                    clearInterval(t);
+                    $(".arrow").css("display","block");
+                },function(){
+                    t=setInterval(change,3500);
+                    $(".arrow").css("display","none");
+                });
+
+                //指示器切换轮播图片
+                $("#circle li").click(function(){
+                    $(this).addClass("show").siblings().removeClass("show").addClass("cir");
+                    index=$(this).index();
+                    $("#content div").eq(index).addClass("current").siblings().removeClass("current").addClass("pic");
+                });
+
+                //根据左右箭头切换轮播
+                $("#imgLeft").click(function(){
+                    moveLeft();
+                });
+
+                $("#imgRight").click(function(){
+                    change();
+                });
+
+                //向左
+                function moveLeft(){
+                    index--;
+                    if(index==-1){
+                        index=length-1;
+                    }
+                    //轮播图片切换
+                    $("#content div").eq(index).addClass("current").siblings().removeClass("current").addClass("pic");
+                    //指示器切换
+                    $("#circle li").eq(index).addClass("show").siblings().removeClass("show").addClass("cir");
+                }
+
+            });
+        </script>
+        <div class="center w">
+            <!--商品分类-->
+            <div class="kinds">
+                <h1><a href="#">所有商品分类<span><img src="img/kinds.png" ></span></a></h1>
+                <!--侧栏-->
+                <div class="aside">
+                    <!--栏目1-->
+                    <dl>
+                        <dt><i class="icon01"></i><a href="list.html" class="fl">有机食品</a></dt>
+                        <dd> 
+                            <div class="text">
+                                <p>有机蔬菜水果</p><span><a href="#">有机蔬菜</a><a href="#">有机水果</a></span>
+                            </div>
+                            <div class="text">
+                                <p>有机肉类禽蛋</p><span><a href="#">有机蛋类</a><a href="#">有机猪肉</a><a href="#">有机牛肉</a>
+                                <a href="#">有机禽类</a></span>
+                            </div>
+                            <div class="text">
+                                <p>有机粮油副食</p><span><a href="#">有机米面/杂粮</a><a href="#">有机调味品</a><a href="#">有机干货</a></span>
+                            </div>
+                        </dd>
+                    </dl>
+                    <!--栏目2-->
+                    <dl>
+                        <dt><i class="icon02"></i><a href="#" class="fl">蔬菜水果</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目3-->
+                    <dl>
+                        <dt><i class="icon03"></i><a href="#" class="fl">肉类禽蛋</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目4-->
+                    <dl>
+                        <dt><i class="icon04"></i><a href="#" class="fl">海鲜水产</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目5-->
+                    <dl>
+                        <dt><i class="icon05"></i><a href="#" class="fl">奶类/烘焙</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目6-->
+                    <dl>
+                        <dt><i class="icon06"></i><a href="#" class="fl">粮油副食</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目7-->
+                    <dl>
+                        <dt><i class="icon07"></i><a href="#" class="fl">休食冲饮</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+                    <!--栏目8-->
+                    <dl>
+                        <dt><i class="icon08"></i><a href="#" class="fl">生态日用</a></dt>
+                        <dd> 二级菜单 </dd>
+                    </dl>
+
+                </div>
+            </div>
+            <!--导航条-->
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">沱沱团</a></li>
+                <li><a href="#">沱沱礼品</a></li>
+                <li><a href="#">宅配卡</a></li>
+                <li><a href="#">沱沱农场</a></li>
+                <li><a href="#">入驻沱沱</a></li>
+            </ul>
+            <!--右侧广告-->
+            <div class="ad">
+                <a href="#"><img src="img/ad.jpg" ></a>
+            </div>
+        </div>
+    </nav>
+
+    <!--专区栏-->
+    <div class="area">
+        <div class="center w">
+            <ul>
+                <li class="one"><a href="#"><div class="text"><h2>水果专区</h2><p>美食有态度，生活有品位</p></div></a></li>
+                <li class="two"><a href="#"><div class="text"><h2>蔬菜专区</h2><p>农场直接采，新鲜飞速达</p></div></a></li>
+                <li class="three"><a href="#"><div class="text"><h2>海鲜专区</h2><p>探访源头产地 甄选当令时鲜</p></div></a></li>
+                <li class="four"><a href="#"><div class="text"><h2>肉类专区</h2><p>专业好品质，放心购好肉</p></div></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--首页楼层-->
+    <div class="floor">
+        <div class="center w">
+            <!--第一楼-->
+            <div class="f1">
+                <!--楼层表头-->
+                <div class="title">
+                    <i></i><h3>蔬菜水果</h3><span><a href="#">更多蔬菜水果>></a></span>
+                </div>
+                <!--主要内容-->
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-1.jpg" width="190" height="190"><h4>智利加力果6粒装  约0.9-1kg/盒</h4><p>¥78.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-5.jpg" width="190" height="190"><h4>进口黑提 约500g/份</h4><p>¥35.80/份</p></a></li>
+                        <li><a href="#"><img src="img/pic-6.jpg" width="190" height="190"><h4>进口香蕉  约1kg/份</h4><p>¥15.60/份</p></a></li>
+                        <li><a href="#"><img src="img/pic-8.jpg" width="190" height="190"><h4>新奇士橙4粒装  约1kg/盒</h4><p>¥41.80/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-3.jpg" width="190" height="190"><h4>有机土豆 约500g/份</h4><p>¥13.60/份</p></a></li>
+                        <li><a href="#"><img src="img/pic-2.jpg" width="190" height="190"><h4>生态圆茄子 350-450g/份</h4><p>¥6.20/份</p></a></li>
+                        <li><a href="#"><img src="img/pic-4.jpg" width="190" height="190"><h4>生态黄贝贝瓜400g/盒 </h4><p>¥15.60/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-7.jpg" width="190" height="190"><h4>温县铁棍山药3斤装/盒</h4><p>¥56.80/盒</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第二楼-->
+            <div class="f2">
+                <div class="title">
+                    <i></i><h3>肉类禽蛋</h3><span><a href="#">更多肉类禽蛋>></a></span>
+                </div>
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-9.jpg" width="190" height="190"><h4>海南带皮小黄牛肉 牛腿肉300g</h4><p>¥88.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-10.jpg" width="190" height="190"><h4>草原黑头羊 红柳羊肉串 180g</h4><p>¥39.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-11.jpg" width="190" height="190"><h4>橡子黑猪 前腿肉 500g/袋</h4><p>¥59.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-13.jpg" width="190" height="190"><h4>蒙古有机公鸡 1.1kg/只</h4><p>¥88.00/只</p></a></li>
+                        <li><a href="#"><img src="img/pic-14.jpg" width="190" height="190"><h4>百年栗园有机柴鸡蛋 24枚/盒</h4><p>¥55.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-12.jpg" width="190" height="190"><h4>海南带皮小黄牛肉 牛腩 300g</h4><p>¥86.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-16.jpg" width="190" height="190"><h4>百年栗园 鸡翅根 500g/袋</h4><p>¥18.80/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-15.jpg" width="190" height="190"><h4>国丹8枚红心咸麻鸭蛋</h4><p>¥32.80/盒</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第三楼-->
+            <div class="f3">
+                <div class="title">
+                    <i></i><h3>海鲜水产</h3><span><a href="#">更多海鲜水产>></a></span>
+                </div>
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-17.jpg" width="190" height="190"><h4>加拿大熟冻龙虾400-450g/只</h4><p>¥98.00/只</p></a></li>
+                        <li><a href="#"><img src="img/pic-18.jpg" width="190" height="190"><h4>加拿大北极虾 400g/袋</h4><p>¥35.80/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-19.jpg" width="190" height="190"><h4>世界风情进口海鲜礼盒B</h4><p>¥888.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-22.jpg" width="190" height="190"><h4>越南黑虎虾（21-30）净重400g/盒</h4><p>¥69.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-20.jpg" width="190" height="190"><h4>阿根廷船冻红虾（10-20）2kg/盒</h4><p>¥188.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-21.jpg" width="190" height="190"><h4>越南黑虎虾（16-20）净重400g/盒</h4><p>¥82.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-23.jpg" width="190" height="190"><h4>北极冰山蚌1kg/盒 </h4><p>¥128.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-24.jpg" width="190" height="190"><h4>调味北极贝500g</h4><p>¥68.00/份</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第四楼-->
+            <div class="f4">
+                <div class="title">
+                    <i></i><h3>奶类烘焙</h3><span><a href="#">更多奶类烘焙>></a></span>
+                </div>
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-25.jpg" width="190" height="190"><h4>艾美牌杏果发酵乳 100g </h4><p>¥8.80/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-26.jpg" width="190" height="190"><h4>缘天然有机纯牛奶 250ml*12盒/箱</h4><p>¥68.00/箱</p></a></li>
+                        <li><a href="#"><img src="img/pic-27.jpg" width="190" height="190"><h4>兰格格风味酸牛奶200g/瓶</h4><p>¥9.90/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-28.jpg" width="190" height="190"><h4>艾美牌菠萝发酵乳 100g</h4><p>¥8.80盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-29.jpg" width="190" height="190"><h4>第一家牌印度煎饼 325g</h4><p>¥16.90/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-30.jpg" width="190" height="190"><h4>总统牌爱曼塔切片干酪片 200g/块</h4><p>¥25.80/块</p></a></li>
+                        <li><a href="#"><img src="img/pic-31.jpg" width="190" height="190"><h4>总统牌咸味黄油块 200g/块 </h4><p>¥33.90/块</p></a></li>
+                        <li><a href="#"><img src="img/pic-32.jpg" width="190" height="190"><h4>格林农庄奶油奶酪 125g/袋</h4><p>¥29.80/袋</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第五楼-->
+            <div class="f5">
+                <div class="title">
+                    <i></i><h3>粮油副食</h3><span><a href="#">更多粮油副食>></a></span>
+                </div>
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-33.jpg" width="190" height="190"><h4>玺赞 原乡上品即食枸杞 300g/盒</h4><p>¥158.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-34.jpg" width="190" height="190"><h4>汨粽.端午风味礼盒 800g/盒</h4><p>¥118.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-35.jpg" width="190" height="190"><h4>汨粽.汨罗经典粽 400g/袋</h4><p>¥38.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-36.jpg" width="190" height="190"><h4>【沱沱工社】饺子粉 2kg/袋</h4><p>¥29.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-37.jpg" width="190" height="190"><h4>贝蒂斯 特级初榨橄榄油750ml/瓶</h4><p>¥128.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-38.jpg" width="190" height="190"><h4>祥宇橄榄油  500ml/瓶</h4><p>¥128.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-39.jpg" width="190" height="190"><h4>阴山优麦 全胚芽燕麦香米400g/盒 </h4><p>¥19.80/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-40.jpg" width="190" height="190"><h4>玺赞 果然好即食枸杞 258g/罐</h4><p>¥88.00/罐</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第六楼-->
+            <div class="f6">
+                <div class="title">
+                    <i></i><h3>休闲冲饮</h3><span><a href="#">更多休闲冲饮>></a></span>
+                </div>
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-41.jpg" width="190" height="190"><h4>博扬山楂条350g/袋</h4><p>¥15.80/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-42.jpg" width="190" height="190"><h4>绿纯野酸枣蜜 465g/瓶</h4><p>¥25.80/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-43.jpg" width="190" height="190"><h4>叫莫日根的黑蜂蜜 240g/瓶</h4><p>¥180.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-46.jpg" width="190" height="190"><h4>叫莫日根的黑蜂蜜 280g/瓶</h4><p>¥88.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-44.jpg" width="190" height="190"><h4>海斯拉夫麦卢卡活性蜂蜜250g</h4><p>¥654.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-45.jpg" width="190" height="190"><h4>金米兰 咖啡豆（20g/包*5包）/盒</h4><p>¥228.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-47.jpg" width="190" height="190"><h4>波龙堡 2015年红葡萄酒 750ml/瓶 </h4><p>¥138.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-48.jpg" width="190" height="190"><h4>波龙堡 2012年干红葡萄酒 750ml/瓶</h4><p>¥298.00/瓶</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第七楼-->
+            <div class="f7">
+                <div class="title">
+                    <i></i><h3>生态日用</h3><span><a href="#">更多生态日用>></a></span>
+                </div>
+                <div class="main">
+                    <a href="#" class="enter"></a>
+                    <ul>
+                        <li><a href="#"><img src="img/pic-49.jpg" width="190" height="190"><h4>北鼎K100智能养生壶1.5L</h4><p>¥858.00/个</p></a></li>
+                        <li><a href="#"><img src="img/pic-50.jpg" width="190" height="190"><h4>淳纺婴儿六件套大礼包 </h4><p>¥399.00/套</p></a></li>
+                        <li><a href="#"><img src="img/pic-51.jpg" width="190" height="190"><h4>美生贝乐厨房清洁剂</h4><p>¥79.00/瓶</p></a></li>
+                        <li><a href="#"><img src="img/pic-52.jpg" width="190" height="190"><h4>柔舒然白粘土纯净清洁皂85克</h4><p>¥138.00/块</p></a></li>
+                        <li><a href="#"><img src="img/pic-53.jpg" width="190" height="190"><h4>柔舒然阿甘油系列礼盒</h4><p>¥318.00/盒</p></a></li>
+                        <li><a href="#"><img src="img/pic-54.jpg" width="190" height="190"><h4>柔舒然婴幼儿洁肤保湿皂100克</h4><p>¥96.00/块</p></a></li>
+                        <li><a href="#"><img src="img/pic-55.jpg" width="190" height="190"><h4>逸乐舒多用途苏打粉 500ml/袋</h4><p>¥89.00/袋</p></a></li>
+                        <li><a href="#"><img src="img/pic-56.jpg" width="190" height="190"><h4>朗圣洁无氟防蛀固齿牙膏99g </h4><p>¥79.00/支</p></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--二维码及资质栏-->
+    <div class="ensure">
+        <div class="center w">
+            <div class="left">
+                <div class="pic"></div>
+                <div class="text">
+                    <h5>手机APP下载</h5>
+                    <p>“摇一摇“美味零食免费送</p>
+                    <p> APP首单直减20，券号9920</p>
+                    <i><a href="#"></a></i><span><a href="#"></a></span>
+                </div>
+            </div>
+
+            <div class="ad"></div>
+
+            <div class="right">
+                <div class="pic"></div>
+                <div class="text">
+                    <h5>关注微信</h5>
+                    <p>回复”礼物“有惊喜！</p>
+                    <p>活动多多，在沱沱遇见幸福的自己</p>
+                    <i><a href="#"></a></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brand"><div class="center w"></div></div>
+
+    <!--服务栏-->
+    <div class="serve">
+        <div class="center w">
+            <!--客户服务-->
+            <div class="people">
+                <h6>客户服务</h6>
+                <ul>
+                    <li><a href="#">服务声明</a></li>
+                    <li><a href="#">支付说明</a></li>
+                    <li><a href="#">境外支付</a></li>
+                    <li><a href="#">配送说明</a></li>
+                    <li><a href="#">配送范围</a></li>
+                    <li><a href="#">订单查询</a></li>
+                    <li><a href="#">取消订单</a></li>
+                    <li><a href="#">补交货款</a></li>
+                    <li><a href="#">隐私条款</a></li>
+                    <li><a href="#">安全条款</a></li>
+                </ul>
+            </div>
+            <!--热门咨询-->
+            <div class="refer">
+                <h6>热门咨询</h6>
+                <div class="text">
+                    <p><a href="#">沱沱工社网上购物流程</a></p>
+                    <p><a href="#">沱沱工社网上购物演示</a></p>
+                    <p><a href="#">沱沱工社能配送那些城市？</a></p>
+                    <p><a href="#">沱沱工社售后服务是什么样的？</a></p>
+                    <p><a href="#">我应该提前多久预定商品？</a></p>
+                </div>
+            </div>
+            <!--热门城市-->
+            <div class="city">
+                <h6>同城生鲜专区</h6>
+                <ul>
+                    <li><a href="#">北京生鲜</a></li>
+                    <li><a href="#">上海生鲜 </a></li>
+                    <li><a href="#">广州生鲜</a></li>
+                    <li><a href="#">深圳生鲜</a></li>
+                    <li><a href="#">天津生鲜</a></li>
+                    <li><a href="#">重庆生鲜</a></li>
+                    <li><a href="#">成都生鲜</a></li>
+                    <li><a href="#">西安生鲜</a></li>
+                    <li><a href="#">武汉生鲜</a></li>
+                    <li><a href="#">南京生鲜</a></li>
+                    <li><a href="#">厦门生鲜</a></li>
+                    <li><a href="#">更多城市</a></li>
+                </ul>
+            </div>
+            <!--联系我们-->
+            <div class="contact">
+                <h6>联系我们</h6>
+                <div class="text">
+                    <p>全国订购热线：400-898-9797（免长途费）</p>
+                    <p>在线客服</p>
+                    <p>7×24小时在线订购</p>
+                    <p>客服工作时间：8:30-21:00</p>
+                    <p>E-mail:kefu@tuo.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--底栏-->
+    <footer>
+        <div class="center w">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">服务条款</a></li>
+                <li><a href="#">网站地图</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">九城集团</a></li>
+                <li><a href="#">沱沱网</a></li>
+                <li><a href="#">企业员工内购</a></li>
+            </ul>
+            <p>Copyright &copy; 2009-2017 北京沱沱工社生态农业股份有限公司 版权所有 京ICP证100205号 京ICP备09043401号
+                京公网安备110105019943 食品流通许可证编号SP1101091310024845</p>
+        </div>
+    </footer>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{background: #d4e0e0;}
+/*头部banner广告位*/
+.banner{width:1200px;height:500px;}
+.banner img{width:100%;height:auto;}
+/*优惠券部分*/
+.main{width:1200px;height:auto;}
+.coupon{width:1200px;height:144px;background:#535353;}
+.coupon span{float: left;margin-top: 22px;}
+.coupon span:first-child{margin-left:200px;}
+
+.ad{width:980px;height:210px;margin-top: 10px;}
+.ad span{float: left;}
+
+.banner1{width:1200px;height:285px;}
+.banner1 img{width:1200px;height:auto;}
+/*商品部分*/
+.product {width: 1000px;height:1580px;margin-top:10px;margin-left:100px;}
+.product .colum-2 span{float: left;}
+.product .colum-3 span{float: left;margin-top: 10px;margin-right: 10px;}
+
+.banner2{width:1200px;height:245px;margin-top: 10px;}
+.banner2 img{width:1200px;height:auto;}
+.fenshop{width:1000px;height:1580px;margin-left: 100px; }
+.fenshop .fen-a{width:330px;height:1120px;float: left;margin-top:180px;}
+.fenshop .fen-a img{margin-bottom: 10px;}
+.fenshop .fen-b{width:330px;height:1580px;float: left;}
+.fenshop .fen-b img{margin-bottom: 10px;}
+.fenshop .fen-c{width:330px;height:1120px;float: left;margin-top:180px;}
+.fenshop .fen-c img{margin-bottom: 10px;}
+
+
+.banner3{width:1200px;height:245px;}
+.banner3 img{width:1200px;height:auto;}
+.product1 {width: 1000px;height:1580px;margin-left:100px;}
+.product1 .colum-2 span{float: left;}
+.product1 .colum-3 span{float: left;}
+
+.banner4{width:1200px;height:245px;}
+.banner4 img{width:1200px;height:auto;}
+
+.banner5{width:1200px;height:245px;}
+.banner5 img{width:1200px;height:auto;}
+
+.banner6{width:1000px;height:785px;}
+.banner6 img{width:1000px;height:auto;}
+.botshop{width:1000px;height:400px;background:#000000;}
+.botshop img{margin-left: 70px;margin-bottom: 20px;}
+
+.banner7{width:1000px;height:785px;margin-top:20px;}
+.banner7 img{width:1000px;height:auto;}
+.ditu{width:800px;height:500px;}
+.ditu img{margin-left: -35px;margin-top:-50px;box-shadow: 5px 5px 5px #000000;}

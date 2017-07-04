@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	width: 7.5rem;
+	height: 13.34rem;
+	background: url(../images/%E7%99%BB%E5%BD%95_bg.png) no-repeat top center;
+	margin: 0 auto;
+	background-size: cover;
+}
+/*header*/
+header {
+	width: 7.5rem;
+	height: 0.88rem;
+	margin: 0 auto;
+	border-bottom: 0.01rem solid #d9d9d9;
+	padding-top: 0.2rem;
+	padding-left: 0.25rem;
+}
+header img {
+	width: 0.21rem;
+	height: 0.35rem;
+	float: left;
+	margin-right: 0.1rem;
+	margin-top: 0.07rem;
+}
+header .resize {
+	width: 33.3%;
+	float: left;
+	font-size: 0.33rem;
+}
+header .center {
+	width: 20%;
+	float: left;
+	font-size: 0.33rem;
+	text-align: center;
+}
+header .right {
+	width: 15%;
+	float: right;
+	font-size: 0.33rem;
+}
+header .resize, header .center, header .right a {
+}
+header a:hover {
+	color: #67af03;
+}
+/*header end*/
+/*main*/
+.main {
+	width: 7.5rem;
+	height: auto;
+	margin: 0 10%;
+	padding-top: 0.6rem;
+}
+.main a.first {
+	width: 40%;
+	height: 0.72rem;
+	border: 0.01rem solid #67af03;
+	background: #67af03;
+	font-size: 0.36rem;
+	color: #fff;
+	padding-top: 0.1rem;
+	text-align: center;
+	display: block;
+	float: left;
+}
+.main a.first1 {
+	width: 40%;
+	height: 0.72rem;
+	border: 0.01rem solid #67af03;
+	font-size: 0.36rem;
+	color: #67af03;
+	padding-top: 0.1rem;
+	text-align: center;
+	display: block;
+	float: left;
+}
+.main .userName {
+	width: 80%;
+	height: 0.5rem;
+	margin-top: 3rem;
+	border-bottom: 0.01rem solid #d9d9d9;
+	clear: both;
+}
+.main .userName img {
+	width: 0.36rem;
+	height: 0.36rem;
+	float: left;
+}
+.main .userName input {
+	width: 80%;
+	height: 0.4rem;
+	border: 0 none;
+	float: left;
+	padding-left: 0.1rem;
+	background: transparent;
+	font-size: 0.3rem;
+}
+.main .userName input::-webkit-input-placeholder {
+color:#a4a4a0;
+}
+.main .pass {
+	width: 80%;
+	height: 0.5rem;
+	margin-top: 0.8rem;
+	border-bottom: 0.01rem solid #d9d9d9;
+}
+.main .pass img {
+	width: 0.36rem;
+	height: 0.36rem;
+	float: left;
+}
+.main .pass input {
+	width: 80%;
+	;
+	height: 0.4rem;
+	border: 0 none;
+	float: left;
+	padding-left: 0.1rem;
+	background: transparent;
+	font-size: 0.3rem;
+}
+.main .pass input::-webkit-input-placeholder {
+color:#a4a4a0;
+}
+.main .login {
+	width: 90%;
+	height: 0.7rem;
+}
+.main .login input {
+	width: 90%;
+	height: 0.6rem;
+	font-size: 0.28rem;
+	letter-spacing: 0.04rem;
+	color: #fff;
+	background: #67af03;
+	margin-top: 0.8rem;
+}
+.main .login:hover input {
+	cursor: pointer;
+}
+.main .see {
+	color: #80b737;
+	font-size: 0.27rem;
+	display: block;
+	margin-top: 1rem;
+	margin-left: 66%;
+}
+.main .images {
+	width: 80%;
+	height: 0.9rem;
+	margin-top: 3rem;
+}
+.main .images img {
+	width: 0.87rem;
+	height: 0.87rem;
+	float: left;
+	margin-right: 14%;
+}
+.main .images img:hover {
+	cursor: pointer;
+}
+.main .images img:nth-child(4) {
+	margin-right: 0rem;
+}
+/*main end*/

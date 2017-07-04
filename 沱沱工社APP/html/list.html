@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--禁止浏览器从本地缓存中调阅页面;网页不保存在缓存中，每次访问都刷新页面-->
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+
+    <!--禁止百度转码 贴广告-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--手机号码不被显示为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+
+    <!--顶部状态条的颜色，在web app应用状态条（屏幕顶部条）的颜色；default白色 black黑色 black-translucent灰色半透明-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--说明：网站开启对web app程序的支持-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--解决uc浏览器在识别到页面文字很多的情况下会自动放大字体优化阅读体验   关闭-->
+    <meta name="wap-font-scale" content="no">
+
+    <!--"添加到主屏幕“后，全屏显示 <meta name="apple-mobile-web-app-capable" content="yes" />
+    这meta的作用就是删除默认的苹果工具栏和菜单栏。content有两个值”yes”和”no”,当我们需要显示工具栏和菜单栏时，这个行meta就不用加了，默认就是显示。-->
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <!--如果网页适合在移动设备上进行浏览  终端适配 应该是在移动端日益增长的流量的大势下产生的需求-->
+    <meta name="applicable-device" content="mobile">
+
+    <!---手机端点击时，禁止出现灰色区域的方法-->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="有机食品,天然食品,绿色食品,有机,蔬菜水果,肉蛋禽奶,海鲜,水产,粮油,副食,
+    沱沱工社,沱沱网,沱沱">
+    <meta name="description" content="沱沱工社-中国首家专业提供有机食品,天然食品等生鲜类商品的B2C网上商
+    城,产品包括蔬菜,水果,鲜肉,冷冻肉,牛奶,蛋类,海产品,粮油副食等9大类300个小类,近万种商品.沱沱工社为您量
+    身打造有机,天然,高品质网上食品超市新体验">
+    <title>list</title>
+    <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css">
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <!--返回-->
+        <a href="#" class="return"><img src="../images/icon-14.png" ><span>返回</span></a>
+        <!--搜索框-->
+        <form action="" method="post">
+            <a href="#"><img src="../images/搜索.png" class="left"><input type="text" placeholder="全部">
+                <img src="../images/icon-15.png " class="right"></a>
+        </form>
+        <!--筛选-->
+        <a href="#" class="choose">筛选</a>
+    </header>
+
+    <!--热卖-->
+    <div class="hot">
+        <ul>
+            <li class="active"><a href="#">热卖</a></li>
+            <li><a href="#" class="price">价格<img src="../images/icon-16.png"></a></li>
+            <li><a href="#">好评</a></li>
+            <li><a href="#">新品</a></li>
+        </ul>
+        <!--分类-->
+        <div class="kinds">
+            <a href="#" class="active">全部</a>
+            <a href="#">牛肉</a>
+            <a href="#">羊肉</a>
+            <a href="#" class="big">猪肉</a>
+            <a href="#">禽类</a>
+            <a href="#">腌腊肉品</a>
+            <a href="#">肉类礼盒</a>
+            <a href="#" class="big">其他肉类</a>
+        </div>
+    </div>
+
+    <!--商品-->
+    <div class="shop">
+        <dl class="first">
+            <a href="#" class="image"><img src="../images/pic-13.jpg"></a>
+            <dt>
+                <a href="#"><h4><i>自营</i>GUOLIAN 珍珠鲜虾仁71/90 800g</h4></a>
+                <p><b>多倍积分</b></p>
+            </dt>
+            <dd>
+                <p class="price"><i>￥</i><b>9.</b><em>90</em></p>
+                <p class="word"><span>中国</span><label>4047条评论</label></p>
+                <a href="#"><img src="../images/buy.png"></a>
+            </dd>
+        </dl>
+
+        <dl>
+            <a href="#" class="image"><img src="../images/pic-14.jpg"></a>
+            <dt>
+                <a href="#"><h4><i>自营</i>纷赋 黄袋鼠梅洛红葡萄酒 750ml/瓶</h4></a>
+                <p><b>多倍积分</b><em>买赠</em></p>
+            </dt>
+            <dd>
+                <p class="price"><i>￥</i><b>9.</b><em>90</em></p>
+                <p class="word"><span>中国</span><label>4047条评论</label></p>
+                <a href="#"><img src="../images/buy.png"></a>
+            </dd>
+        </dl>
+
+        <dl>
+            <a href="#" class="image"><img src="../images/pic-20.jpg"></a>
+            <dt>
+                <a href="#"><h4><i>自营</i>新西兰佳沛金果22粒 140~180g</h4></a>
+                <p><b>多倍积分</b><em>买赠</em></p>
+            </dt>
+            <dd>
+                <p class="price"><i>￥</i><b>9.</b><em>90</em></p>
+                <p class="word"><span>中国</span><label>4047条评论</label></p>
+                <a href="#"><img src="../images/buy.png"></a>
+            </dd>
+        </dl>
+
+        <dl>
+            <a href="#" class="image"><img src="../images/pic-19.jpg"></a>
+            <dt><a href="#"><h4><i>自营</i>艾菲堡 梅洛红葡萄酒 750ml/瓶</h4></a></dt>
+            <dd>
+                <p class="price"><i>￥</i><b>9.</b><em>90</em></p>
+                <p class="word"><span>中国</span><label>4047条评论</label></p>
+                <a href="#"><img src="../images/buy.png"></a>
+            </dd>
+        </dl>
+
+    </div>
+
+    <!--底部-->
+    <footer>
+        <a href="#" class="one"><img src="../images/icon-17.png"></a>
+        <a href="#" class="two"><img src="../images/icon-18.png"></a>
+        <a href="#" class="three"><img src="../images/icon-12.png"></a>
+    </footer>
+</body>
+</html>

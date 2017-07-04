@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+.logo_bar {
+    height: 100px;
+    border-bottom: 2px solid #c92c4d;
+}
+
+.logo_bar .logo {
+    width: 200px;
+    height: 15px;
+}
+
+.logo_bar h3 {
+    font-size: 22px;
+    color: #669900;
+    line-height: 80px;
+}
+
+.success_box {
+    padding: 50px 0 0 500px;
+    margin-bottom: 50px;
+}
+
+.success_box h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.success_box h2 img {
+    margin-right: 15px;
+}
+
+.success_box span i {
+    background: #669900;
+    border: 1px solid #ddd;
+    height: 35px;
+    width: 130px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 33px;
+}
+
+.success_box span i a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.success_box span img {
+    margin: 0 20px;
+}
+
+.success_box span b {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.huo {
+    text-align: center
+}
+
+.huo img {
+    width: 450px;
+}
+
+.perfect {
+    height: 210px;
+    background: #f6f6f6;
+    padding-top: 20px
+}
+
+.perfect .perfect_box {
+    width: 1150px;
+    height: 185px;
+    margin: 0 auto;
+    border: 2px solid #CACACA;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.perfect .perfect_box h1 {
+    font-size: 20px;
+    padding: 2px 10px;
+    border-bottom: 2px solid #CACACA;
+    height: 35px;
+    line-height: 35px;
+}
+
+.perfect .perfect_box .per_left {
+    width: 40%;
+    padding: 10px;
+}
+
+.perfect .perfect_box dl {
+    padding: 10px;
+    height: 100px;
+    border-right: 1px solid #CACACA;
+}
+
+.perfect .perfect_box dl dt {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #CACACA;
+    margin-right: 10px;
+}
+
+.perfect .perfect_box dl dd {
+    font-size: 14px;
+    width: 180px;
+    float: left;
+    padding: 15px 0 0 10px;
+}
+
+.perfect .perfect_box dl dd a {
+    font-size: 16px;
+}
+
+.perfect .perfect_box .per_right dl {
+    border-right: none;
+}
+

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <!--禁止浏览器从本地缓存中调阅页面;网页不保存在缓存中，每次访问都刷新页面-->
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+    <!--禁止百度转码 贴广告-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--手机号码不被显示为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <!--顶部状态条的颜色，在web app应用状态条（屏幕顶部条）的颜色；default白色 black黑色 black-translucent灰色半透明-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--说明：网站开启对web app程序的支持-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--解决uc浏览器在识别到页面文字很多的情况下会自动放大字体优化阅读体验   关闭-->
+    <meta name="wap-font-scale" content="no">
+    <!--"添加到主屏幕“后，全屏显示 <meta name="apple-mobile-web-app-capable" content="yes" />
+    这meta的作用就是删除默认的苹果工具栏和菜单栏。content有两个值”yes”和”no”,当我们需要显示工具栏和菜单栏时，这个行meta就不用加了，默认就是显示。-->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!--如果网页适合在移动设备上进行浏览  终端适配 应该是在移动端日益增长的流量的大势下产生的需求-->
+    <meta name="applicable-device" content="mobile">
+    <!---手机端点击时，禁止出现灰色区域的方法-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--响应式条件-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="有机食品,天然食品,绿色食品,有机,蔬菜水果,肉蛋禽奶,海鲜,水产,粮油,副食,
+    沱沱工社,沱沱网,沱沱">
+    <meta name="description" content="沱沱工社-中国首家专业提供有机食品,天然食品等生鲜类商品的B2C网上商
+    城,产品包括蔬菜,水果,鲜肉,冷冻肉,牛奶,蛋类,海产品,粮油副食等9大类300个小类,近万种商品.沱沱工社为您量
+    身打造有机,天然,高品质网上食品超市新体验">
+<title>订单页面！！！</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/submit.css">
+</head>
+
+<body>
+<!--header-->
+<header>
+	<img src="../images/arrow_left.png">
+    <div class="resize"><a href="#">返回</a></div>
+    <div class="center"><a href="#">确认订单</a></div>
+</header>
+<!--header end-->
+
+<!--main-->
+<div class="main">
+    <p>运费：￥10.00</p>
+    <div class="box"></div>
+    <p>免邮券<span><img src="../images/arrow_right.png"></span></p>
+    <p>优惠券<span><img src="../images/arrow_right.png"></span></p>
+    <p>优选单优惠<span><img src="../images/arrow_right.png"></span></p>
+    <p>优选卡<span class="you"><img src="../images/09-填写订单页_03.png"></span></p>
+    <p>使用积分<span><img src="../images/arrow_right.png"></span></p>
+    <p class="color">余额：￥0.00</p>
+
+<!--about-->
+    <div class="about">
+        <div class="about_l">
+            <h3>沱沱工社：<br/>100积分 可抵 <span>￥0.50</span></h3>
+        </div>
+        <div class="about_r">
+            <h4>本次用<span class="span1"><img src="../images/kuang_03.png"></span><span class="span2">元</span></h4>
+        </div>
+    </div>
+<!--about end-->
+
+    <div class="box"></div>
+    <p class="images"><span class="b"><img src="../images/09-填写订单页_03.png"></span>开具普通发票<span class="a"><img src="../images/09-填写订单页_08.png"></span></p>
+    <div class="box"></div>
+    <p class="images"><span class="b"><img src="../images/09-填写订单页_06.png"></span>购物清单显示金额<span class="a"><img src="../images/09-填写订单页_08.png"></span></p>
+    <div class="box"></div>
+
+<!--dingdan-->
+    <div class="dingdan">
+        <h5>订单1<span class="span3">自营</span><span class="span5"><a href="#"><img src="../images/arrow_right.png"></a></span><span class="span4">运费：<em>￥10.00</em></span></h5>
+        <dl>
+        <dt><img src="../images/img_03.png"></dt>
+        <dd>
+            <h3>闲工夫 澳洲黑椒牛排<br/>130克<span><br/>急速锁鲜 清新弹牙</span></h3>
+            <h4>￥9.90<span class="add">x1</span><br/><span class="weight">0.42kg</span></h4>
+        </dd>
+    </dl>
+    <div class="dingdan_bottom">
+            <p class="b">商品数量：1件</p>
+            <p class="b">商品重量：0.13kg</p>
+            <p class="b">商品总金额：￥9.90</p>
+        </div>
+    </div>
+<!--dingdan end-->
+</div>
+<!--main end-->
+
+<!--foot-->
+<div class="foot">
+    <p>应付金额：<span>￥19.90</span></p>
+    <a href="#">提交订单</a>
+</div>
+<!--foot end-->
+
+</body>
+</html>
